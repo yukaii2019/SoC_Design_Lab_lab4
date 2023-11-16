@@ -14,6 +14,7 @@
 
 ## How to replicate
 in this folder, run
-sh
+```sh
 source run_clean
 source run_sim
+```
