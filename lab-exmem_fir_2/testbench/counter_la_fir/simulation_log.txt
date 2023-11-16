@@ -1,0 +1,14 @@
+Reading counter_la_fir.hex
+ERROR: ../../vip/spiflash.v:111: $readmemh: Unable to open counter_la_fir.hex for reading.
+counter_la_fir.hex loaded into memory
+Memory 5 bytes = 0xxx 0xxx 0xxx 0xxx 0xxx
+VCD info: dumpfile counter_la_fir.vcd opened for output.
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 4686012500 ticks.
+> ^C^C^C^C^C^C^C^C^C^C^CReading counter_la_fir.hex
+counter_la_fir.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile counter_la_fir.vcd opened for output.
+LA Test 1 started
+LA Test 2 passed

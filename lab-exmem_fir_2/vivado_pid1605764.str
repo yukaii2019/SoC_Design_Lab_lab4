@@ -1,0 +1,234 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 1605764
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Nov 16 17:00:41 CST 2023
+Time zone: 	Taipei Standard Time (Asia/Taipei)
+
+OS: Ubuntu
+OS Version: 5.15.0-87-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: localhost:14.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ystseng
+User home directory: /home/ystseng
+User working directory: /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2022.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/ystseng/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/ystseng/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/ystseng/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vivado.log
+Vivado journal file: 	/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1605764-MediaHLS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2022.1
+XILINX_SDK: /opt/Xilinx/Vitis/2022.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2022.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2022.1
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,945 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,954 MB. GUI used memory: 57 MB. Current time: 11/16/23, 5:00:42 PM CST
+setFileChooser("/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.xpr");
+// [GUI Memory]: 70 MB (+70408kb) [00:00:11]
+// [Engine Memory]: 1,957 MB (+1901091kb) [00:00:11]
+// Opening Vivado Project: /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 96 MB (+23636kb) [00:00:11]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 113 MB (+13009kb) [00:00:12]
+// [Engine Memory]: 2,058 MB (+3014kb) [00:00:12]
+// Tcl Message: open_project /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/testbench/counter_la_fir/project_1' since last save. INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory '/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.gen/sources_1', nor could it be found using path '/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/testbench/counter_la_fir/project_1/project_1.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'. 
+// Project name: project_1; location: /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bA
+// [GUI Memory]: 129 MB (+11402kb) [00:00:15]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// 'k' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1160] Copying file /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.runs/synth_1/user_proj_example.dcp to /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/testbench/counter_la_fir/project_1/project_1.srcs/utils_1/imports/synth_1 and adding it to utils fileset 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 12 
+// Tcl Message: [Thu Nov 16 17:00:58 2023] Launched synth_1... Run output will be captured here: /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 37 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ag
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+// [GUI Memory]: 136 MB (+30kb) [00:01:07]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,180 MB. GUI used memory: 72 MB. Current time: 11/16/23, 5:01:47 PM CST
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,501 MB. GUI used memory: 72 MB. Current time: 11/16/23, 5:01:49 PM CST
+// [Engine Memory]: 2,503 MB (+357912kb) [00:01:14]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 143 MB (+279kb) [00:01:15]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7804.074 ; gain = 0.000 ; free physical = 90101 ; free virtual = 117546 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.srcs/constrs_1/new/ty.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.srcs/constrs_1/new/ty.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.srcs/constrs_1/new/ty.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8181.094 ; gain = 0.000 ; free physical = 89628 ; free virtual = 117072 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 8277.934 ; gain = 473.859 ; free physical = 89523 ; free virtual = 116967 
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectTab(PAResourceQtoS.ReportTimingSummaryDialog_REPORT_TIMING_SUMMARY_DIALOG_TABBED, PAResourceQtoS.ReportTimingSummaryDialog_ADVANCED, "Advanced", 1); // i
+selectCheckBox(PAResourceAtoD.CommandOutputOptionsPanel_EXPORT_TO_FILE, "Export to file:", true); // g: TRUE
+selectButton(PAResourceAtoD.CommandOutputOptionsPanel_CHOOSE_OUTPUT_FILE_FOR_TIMING_REPORT, (String) null); // s
+// Elapsed time: 55 seconds
+dismissFileChooser();
+selectButton(PAResourceAtoD.CommandOutputOptionsPanel_CHOOSE_OUTPUT_FILE_FOR_TIMING_REPORT, (String) null); // s
+setFileChooser("/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/timing_report.txt");
+selectButton(PAResourceAtoD.CommandOutputOptionsPanel_CHOOSE_OUTPUT_FILE_FOR_TIMING_REPORT, (String) null); // s
+setFileChooser("/home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/syn_report/timing_report.txt");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'r' command handler elapsed time: 69 seconds
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/syn_report/timing_report.txt 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// [Engine Memory]: 2,647 MB (+20747kb) [00:02:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,660 MB. GUI used memory: 107 MB. Current time: 11/16/23, 5:03:02 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,661 MB. GUI used memory: 108 MB. Current time: 11/16/23, 5:03:07 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Edit Timing Constraints]", 17, false); // n
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+// Elapsed time: 13 seconds
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Outputs (1), Set Output Delay (1)]", 14, false); // bk
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Outputs (1), Set Output Delay (1)]", 14, false, false, false, false, false, true); // bk - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_SET_OUTPUT_DELAY
+dismissDialog("Set Output Delay"); // bR
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Inputs (1), Set Input Delay (1)]", 12, false); // bk
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Inputs (1), Set Input Delay (1)]", 12, false, false, false, false, false, true); // bk - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_SET_INPUT_DELAY
+dismissDialog("Set Input Delay"); // bK
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *clk*] ; rise ;  ;  ; false ; None ; 1.299 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ystseng/SOC/Lab/caravel-soc_fpga-lab/lab-exmem_fir/vvd_fir_lab4_1/project_1/project_1.srcs/constrs_1/new/ty.xdc ;  ; ", 0, (String) null, 3); // v
+// HMemoryUtils.trashcanNow. Engine heap size: 2,670 MB. GUI used memory: 120 MB. Current time: 11/16/23, 5:03:42 PM CST
+// Elapsed time: 21 seconds
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Clocks (1), Create Clock (1)]", 1, false); // bk
+// [GUI Memory]: 174 MB (+25345kb) [00:03:58]
+// Elapsed time: 580 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,701 MB. GUI used memory: 126 MB. Current time: 11/16/23, 5:13:36 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+// [GUI Memory]: 183 MB (+459kb) [00:16:26]
+// TclEventType: FILE_SET_CHANGE
