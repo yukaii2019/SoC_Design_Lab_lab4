@@ -6,8 +6,8 @@
 * vivado project: ./vvd_fir/project_1/
 
 * synthesis area report: ./testbench/counter_la_fir/user_proj_example_utilization_synth.rpt
-* synthesis timing report: ./testbench/timing_report.txt
-* simulation log files: ./testbench/simulation_log.txt
+* synthesis timing report: ./testbench/counter_la_fir/timing_report.txt
+* simulation log files: ./testbench/counter_la_fir/simulation_log.txt
 
 * Report: Report.pdf
 
