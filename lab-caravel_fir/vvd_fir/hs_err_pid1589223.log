@@ -1,0 +1,11 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbefecb) [0x7f99d0aa4ecb]
+/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(JVM_handle_linux_signal+0xd1) [0x7f99d0aabc81]
+/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbead23) [0x7f99d0a9fd23]
+/lib/x86_64-linux-gnu/libc.so.6(+0x43090) [0x7f9a2798c090]
+/opt/Xilinx/Vivado/2022.1/lib/lnx64.o/librdi_common.so(HI18N::Convert::In(wchar_t const*, wchar_t const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::codecvt<wchar_t, char, __mbstate_t> const&)+0x36) [0x7f9a28710a66]
+/opt/Xilinx/Vivado/2022.1/lib/lnx64.o/librdi_common.so(Java_ui_data_common_parami_ParamMgr_1getValueAsBool+0x155) [0x7f9a287ee405]
+[0x7f99bfbd3f1a]

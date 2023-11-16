@@ -1,0 +1,81 @@
+Reading counter_la_fir.hex
+counter_la_fir.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile counter_la_fir.vcd opened for output.
+correct_out[          0] =          0, 0x0000
+correct_out[          1] =          0, 0x0000
+correct_out[          2] =        -10, 0xfff6
+correct_out[          3] =        -29, 0xffe3
+correct_out[          4] =        -25, 0xffe7
+correct_out[          5] =         35, 0x0023
+correct_out[          6] =        158, 0x009e
+correct_out[          7] =        337, 0x0151
+correct_out[          8] =        539, 0x021b
+correct_out[          9] =        732, 0x02dc
+LA Test 1 started
+latency is        2093 cycles
+return value passed, 0x0000
+return value passed, 0x0000
+return value passed, 0xfff6
+return value passed, 0xffe3
+return value passed, 0xffe7
+return value passed, 0x0023
+return value passed, 0x009e
+return value passed, 0x0151
+return value passed, 0x021b
+return value passed, 0x02dc
+return value passed, 0x0393
+return value passed, 0x044a
+return value passed, 0x0501
+return value passed, 0x05b8
+return value passed, 0x066f
+return value passed, 0x0726
+return value passed, 0x07dd
+return value passed, 0x0894
+return value passed, 0x094b
+return value passed, 0x0a02
+return value passed, 0x0ab9
+return value passed, 0x0b70
+return value passed, 0x0c27
+return value passed, 0x0cde
+return value passed, 0x0d95
+return value passed, 0x0e4c
+return value passed, 0x0f03
+return value passed, 0x0fba
+return value passed, 0x1071
+return value passed, 0x1128
+return value passed, 0x11df
+return value passed, 0x1296
+return value passed, 0x134d
+return value passed, 0x1404
+return value passed, 0x14bb
+return value passed, 0x1572
+return value passed, 0x1629
+return value passed, 0x16e0
+return value passed, 0x1797
+return value passed, 0x184e
+return value passed, 0x1905
+return value passed, 0x19bc
+return value passed, 0x1a73
+return value passed, 0x1b2a
+return value passed, 0x1be1
+return value passed, 0x1c98
+return value passed, 0x1d4f
+return value passed, 0x1e06
+return value passed, 0x1ebd
+return value passed, 0x1f74
+return value passed, 0x202b
+return value passed, 0x20e2
+return value passed, 0x2199
+return value passed, 0x2250
+return value passed, 0x2307
+return value passed, 0x23be
+return value passed, 0x2475
+return value passed, 0x252c
+return value passed, 0x25e3
+return value passed, 0x269a
+return value passed, 0x2751
+return value passed, 0x2808
+return value passed, 0x28bf
+return value passed, 0x2976
+LA Test 2 passed

@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Nov 13 18:52:29 2023
+# Process ID: 3982889
+# Current directory: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir
+# Command line: vivado
+# Log file: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/vivado.log
+# Journal file: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/vivado.jou
+# Running On: MediaHLS, OS: Linux, CPU Frequency: 3400.000 MHz, CPU Physical cores: 16, Host memory: 134795 MB
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1 -part xc7z020clg400-1
+add_files -norecurse {/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram11.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/fir.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_bram_control.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/wb_to_axi.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/axi_lite_control.v /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/Xferloop.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v] -no_script -reset -force -quiet
+remove_files  /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+create_clock -period 10.000 -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*clk*" && DIRECTION == "IN" }]
+set_input_delay -clock [get_clocks  "*"] 1.0 [get_ports -filter { NAME =~  "*" && DIRECTION == "IN" }]
+set_output_delay -clock [get_clocks  "*"] 1.0 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }]
+file mkdir /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new
+close [ open /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc w ]
+add_files -fileset constrs_1 /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc
+set_property target_constrs_file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+save_constraints
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1

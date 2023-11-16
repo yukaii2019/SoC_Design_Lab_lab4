@@ -1,8 +1,19 @@
-# Execute FIR code in user BRAM
+# SoC Lab Lab4-2 
 
-## Simulation for FIR
+## File Path
+* design.v source: ./rtl/user/*.v
+* firware source: ./testbench/counter_la_fir/counter_la_fir.c, ./testbench/counter_la_fir/fir.c and ./testbench/counter_la_fir/fir.h
+* vivado project: ./vvd_fir/project_1/
+
+* synthesis area report: ./testbench/counter_la_fir/user_proj_example_utilization_synth.rpt
+* synthesis timing report: ./testbench/timing_report.txt
+* simulation log files: ./testbench/simulation_log.txt
+
+* Report: Report.pdf
+
+## How to reproduce
+in this folder, run
 ```sh
-cd ~/caravel-soc_fpga-lab/lab-exmem-fir/testbench/counter_la_fir
 source run_clean
 source run_sim
 ```
