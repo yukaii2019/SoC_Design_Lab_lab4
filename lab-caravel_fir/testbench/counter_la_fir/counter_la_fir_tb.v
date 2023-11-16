@@ -154,24 +154,69 @@ module counter_la_fir_tb;
 		$finish;
 	end
 
+	reg signed [31:0] taps [0:10];
+	reg signed [31:0] data [0:63];
+	reg signed [31:0] correct_out [0:63];
+	integer j, k;
+
+	initial begin
+		taps[0]  = 0;
+		taps[1]  = -10;
+		taps[2]  = -9;
+		taps[3]  = 23;
+		taps[4]  = 56;
+		taps[5]  = 63;
+		taps[6]  = 56;
+		taps[7]  = 23;
+		taps[8]  = -9;
+		taps[9]  = -10;
+		taps[10] = 0;
+
+		for(j = 0 ; j < 64 ; j = j + 1)begin
+			data[j] = j;
+			correct_out[j] = 0;
+		end
+		for(j = 0 ; j < 64 ; j = j + 1)begin
+			for(k = 0 ; k < 11 ; k = k + 1)begin
+				if(j-k >= 0)begin
+					correct_out[j] = data[j-k] * taps[k] + correct_out[j];
+				end
+			end
+		end
+		for(j = 0 ; j < 10 ; j = j + 1)begin
+			$display("correct_out[%d] = %d, 0x%x", j, correct_out[j],  correct_out[j][15:0]);
+		end
+	end
+
+	integer m;
 	initial begin
 		wait(checkbits == 16'hAB40);
 		$display("LA Test 1 started");
-		//wait(checkbits == 16'hAB41);
 
-		//wait(checkbits == 16'd40);
-		//$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		//wait(checkbits == 16'd893);
-		//$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		//wait(checkbits == 16'd2541);
-		//$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		//wait(checkbits == 16'd2669);
-		//$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
+		for(m = 0 ; m < 64 ; m = m + 1)begin
+			wait(checkbits == correct_out[m][15:0]);
+			$display("return value passed, 0x%x", checkbits);
+		end
 
 		wait(checkbits == 16'hAB51);
 		$display("LA Test 2 passed");
 		#10000;
 		$finish;
+	end
+	
+	integer i;
+	integer latency;
+	initial begin
+		for(i = 0 ; i < 3 ; i = i + 1)begin
+			latency = 0;
+			wait(mprj_io[23:16] == 8'hA5);
+
+			while (!(mprj_io[23:16] == 8'h5A)) begin
+				@(posedge clock);
+				latency = latency + 1;	
+			end
+			$display("latency is %d cycles", latency);	
+		end
 	end
 
 	initial begin

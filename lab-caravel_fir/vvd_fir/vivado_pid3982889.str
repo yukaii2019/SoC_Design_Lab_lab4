@@ -1,0 +1,2133 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 3982889
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Nov 13 18:52:38 CST 2023
+Time zone: 	Taipei Standard Time (Asia/Taipei)
+
+OS: Ubuntu
+OS Version: 5.15.0-87-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: localhost:13.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ykhsieh
+User home directory: /home/ykhsieh
+User working directory: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2022.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/ykhsieh/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/ykhsieh/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/ykhsieh/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/vivado.log
+Vivado journal file: 	/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-3982889-MediaHLS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2022.1
+XILINX_SDK: /opt/Xilinx/Vitis/2022.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2022.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2022.1
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,917 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 59 MB. Current time: 11/13/23, 6:52:39 PM CST
+// Elapsed time: 10 seconds
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+// [GUI Memory]: 80 MB (+81546kb) [00:00:22]
+// [Engine Memory]: 1,932 MB (+1874627kb) [00:00:22]
+// [GUI Memory]: 86 MB (+2066kb) [00:00:22]
+// [GUI Memory]: 115 MB (+25864kb) [00:00:22]
+selectButton("NEXT", "Next >"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 1,938 MB. GUI used memory: 59 MB. Current time: 11/13/23, 6:52:59 PM CST
+// Elapsed time: 12 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7z020clg"); // OverlayTextField
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7z020clg400-1 ; 400 ; 125 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "xc7z020clg400-1", 0); // r
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7z020clg400-1 ; 400 ; 125 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "xc7z020clg400-1", 0); // r
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7z020clg400-1 ; 400 ; 125 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "xc7z020clg400-1", 0, false, false, false, false, true); // r - Double Click
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project project_1 /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1 -part xc7z020clg400-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,995 MB. GUI used memory: 64 MB. Current time: 11/13/23, 6:53:14 PM CST
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 38 seconds
+dismissDialog("Create Project"); // bA
+dismissDialog("New Project"); // f
+// [GUI Memory]: 123 MB (+2583kb) [00:00:44]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // n
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// Elapsed time: 20 seconds
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 36 seconds
+String[] filenames31467 = {"/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/Xferloop.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/axi_lite_control.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram11.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/fir.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_bram_control.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v", "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/wb_to_axi.v"};
+setFileChooser(filenames31467);
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+dismissFileChooser();
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 66 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,044 MB. GUI used memory: 67 MB. Current time: 11/13/23, 6:54:24 PM CST
+// [Engine Memory]: 2,061 MB (+33246kb) [00:01:54]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 3); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_proj_example.counter.v]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_proj_example.counter.v]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_proj_example.counter.v]", 6, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("user_proj_example.counter.v", 256, 230); // be
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_bram_control.v]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_bram_control.v]", 5, false, false, false, false, false, true); // D - Double Click
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 3); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // n
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// Elapsed time: 21 seconds
+selectButton("CANCEL", "Cancel"); // JButton
+// 'g' command handler elapsed time: 21 seconds
+dismissDialog("Add Sources"); // c
+// Elapsed time: 18 seconds
+selectCodeEditor("user_bram_control.v", 97, 170); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 18:55:39 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,170 MB. GUI used memory: 77 MB. Current time: 11/13/23, 6:55:44 PM CST
+// [Engine Memory]: 2,170 MB (+6685kb) [00:03:16]
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-10157] use of undefined macro 'MPRJ_IO_PADS' [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_bram_control.v:24]. ]", 6, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-69] Command failed: Vivado Synthesis failed. ]", 7, false); // ah
+selectCodeEditor("user_bram_control.v", 189, 178); // be
+selectCodeEditor("user_bram_control.v", 179, 178); // be
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_proj_example.counter.v]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_proj_example.counter.v]", 6, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, user_bram_control.v]", 5, false); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_bram_control.v", 2); // m
+selectCodeEditor("user_bram_control.v", 172, 353); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("user_bram_control.v", 176, 366); // be
+selectCodeEditor("user_bram_control.v", 176, 386); // be
+selectCodeEditor("user_bram_control.v", 385, 339); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 18:57:09 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// [GUI Memory]: 130 MB (+923kb) [00:04:37]
+dismissDialog("Starting Design Runs"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,205 MB. GUI used memory: 78 MB. Current time: 11/13/23, 6:57:09 PM CST
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_proj_example.counter.v", 1); // m
+selectCodeEditor("user_proj_example.counter.v", 174, 398); // be
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Failed"); // ag
+selectCodeEditor("user_proj_example.counter.v", 175, 414); // be
+selectCodeEditor("user_proj_example.counter.v", 174, 427); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // al
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 18:57:36 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,233 MB. GUI used memory: 78 MB. Current time: 11/13/23, 6:57:39 PM CST
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Failed"); // ag
+selectCodeEditor("user_proj_example.counter.v", 67, 278); // be
+// Elapsed time: 35 seconds
+selectCodeEditor("user_proj_example.counter.v", 40, 410); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("user_proj_example.counter.v", 70, 413); // be
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_clk_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:48]. ]", 2); // ah
+// [GUI Memory]: 138 MB (+541kb) [00:06:33]
+// Elapsed time: 95 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_clk_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:48]. , [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v;-;;-;16;-;line;-;49;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_clk_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:48]. , [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v;-;;-;16;-;line;-;49;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_clk_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:48]. , [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v;-;;-;16;-;line;-;49;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_clk_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:48]. , [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 3, false, false, false, false, false, true); // ah - Double Click
+// Elapsed time: 59 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Constraints Wizard]", 16, false); // n
+// Elapsed time: 146 seconds
+selectCodeEditor("user_proj_example.counter.v", 68, 417); // be
+selectCodeEditor("user_proj_example.counter.v", 89, 114, false, false, false, true, false); // be - Popup Trigger
+selectCodeEditor("user_proj_example.counter.v", 36, 115); // be
+selectCodeEditor("user_proj_example.counter.v", 66, 96); // be
+selectCodeEditor("user_proj_example.counter.v", 189, 149); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:04:25 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 15 seconds
+dismissDialog("Synthesis Failed"); // ag
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 2); // ah
+selectCodeEditor("user_proj_example.counter.v", 72, 113); // be
+// Elapsed time: 12 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9844] non-net port 'wb_rst_i' cannot be of mode input [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 2); // ah
+selectCodeEditor("user_proj_example.counter.v", 97, 132); // be
+// Elapsed time: 27 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6735] net type must be explicitly specified for 'wb_rst_i' when default_nettype is none [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 1); // ah
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6735] net type must be explicitly specified for 'wb_rst_i' when default_nettype is none [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/user_proj_example.counter.v:49]. ]", 1); // ah
+selectCodeEditor("user_proj_example.counter.v", 82, 133); // be
+selectCodeEditor("user_proj_example.counter.v", 72, 128); // be
+selectCodeEditor("user_proj_example.counter.v", 72, 142); // be
+selectCodeEditor("user_proj_example.counter.v", 71, 177); // be
+selectCodeEditor("user_proj_example.counter.v", 70, 128); // be
+selectCodeEditor("user_proj_example.counter.v", 70, 144, false, false, true, false, false); // be - Alt Key
+selectCodeEditor("user_proj_example.counter.v", 70, 166, false, false, true, false, false); // be - Alt Key
+selectCodeEditor("user_proj_example.counter.v", 71, 126); // be
+selectCodeEditor("user_proj_example.counter.v", 69, 110); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'c'); // be
+selectCodeEditor("user_proj_example.counter.v", 68, 126); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'v'); // be
+selectCodeEditor("user_proj_example.counter.v", 69, 144); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'v'); // be
+selectCodeEditor("user_proj_example.counter.v", 68, 152); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'v'); // be
+selectCodeEditor("user_proj_example.counter.v", 69, 170); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'v'); // be
+selectCodeEditor("user_proj_example.counter.v", 71, 189); // be
+selectCodeEditor("user_proj_example.counter.v", 209, 181); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 55 seconds
+selectCodeEditor("user_proj_example.counter.v", 200, 229); // be
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 2,262 MB. GUI used memory: 79 MB. Current time: 11/13/23, 7:06:59 PM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:07:16 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 155 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-5834] Design needs 65536 RAMB18 which is more than device capacity of 280. ]", 1, false); // ah
+// Elapsed time: 42 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, bram12 (bram12.v)]", 12, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, bram12 (bram12.v)]", 12, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 9); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), user_bram_control_U0 : user_bram_control (user_bram_control.v)]", 13); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), user_bram_control_U0 : user_bram_control (user_bram_control.v), user_bram : bram (bram.v)]", 14, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), user_bram_control_U0 : user_bram_control (user_bram_control.v), user_bram : bram (bram.v)]", 14, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, bram12 (bram12.v)]", 15, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, bram12 (bram12.v)]", 15, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ar
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/rtl/user/bram12.v 
+// [Engine Memory]: 2,283 MB (+4974kb) [00:18:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,289 MB. GUI used memory: 80 MB. Current time: 11/13/23, 7:11:19 PM CST
+selectCodeEditor("bram.v", 138, 155); // be
+selectCodeEditor("bram.v", 49, 138); // be
+selectCodeEditor("bram.v", 99, 148); // be
+// Elapsed time: 22 seconds
+selectCodeEditor("bram.v", 140, 158); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,305 MB. GUI used memory: 80 MB. Current time: 11/13/23, 7:12:14 PM CST
+// Elapsed time: 28 seconds
+selectCodeEditor("bram.v", 169, 301); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:12:30 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 55 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ag
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Utilization - Synth Design ; report_utilization ;  ; Mon Nov 13 19:12:43 CST 2023 ; 8510", 2, "Utilization - Synth Design", 0, false); // O
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Utilization - Synth Design ; report_utilization ;  ; Mon Nov 13 19:12:43 CST 2023 ; 8510", 2, "Utilization - Synth Design", 0, false); // O
+expandTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Utilization - Synth Design ; report_utilization ;  ; Mon Nov 13 19:12:43 CST 2023 ; 8510", 2); // O
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Utilization - Synth Design ; report_utilization ;  ; Mon Nov 13 19:12:43 CST 2023 ; 8510", 2, "Utilization - Synth Design", 0, false, false, false, false, false, true); // O - Double Click
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "synthesis_report ;  ;  ; Mon Nov 13 19:12:43 CST 2023 ; 51651", 3, "synthesis_report", 0, false); // O
+expandTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "synthesis_report ;  ;  ; Mon Nov 13 19:12:43 CST 2023 ; 51651", 3); // O
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "synthesis_report ;  ;  ; Mon Nov 13 19:12:43 CST 2023 ; 51651", 3, "synthesis_report", 0, false, false, false, false, false, true); // O - Double Click
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Utilization - Synth Design - synth_1", 4); // m
+// Elapsed time: 22 seconds
+selectCodeEditor("Utilization - Synth Design - synth_1", 171, 368); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 194, 395); // E
+// Elapsed time: 24 seconds
+selectCodeEditor("Utilization - Synth Design - synth_1", 128, 348); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 390, 415); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 389, 421); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 393, 413); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 170, 412); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 165, 359); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 191, 390); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 431, 365); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 207, 212); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 501, 246); // E
+// Elapsed time: 37 seconds
+selectCodeEditor("Utilization - Synth Design - synth_1", 14, 311); // E
+// Elapsed time: 26 seconds
+selectCodeEditor("Utilization - Synth Design - synth_1", 143, 304); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 66, 311); // E
+selectCodeEditor("Utilization - Synth Design - synth_1", 69, 310); // E
+// Elapsed time: 119 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 24, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,371 MB. GUI used memory: 83 MB. Current time: 11/13/23, 7:18:24 PM CST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [GUI Memory]: 145 MB (+559kb) [00:25:53]
+// [Engine Memory]: 2,410 MB (+13158kb) [00:25:53]
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7972.109 ; gain = 0.000 ; free physical = 98423 ; free virtual = 124899 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8028.137 ; gain = 0.000 ; free physical = 98331 ; free virtual = 124807 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 64 instances were transformed.   RAM16X1S => RAM32X1S (RAMS32): 64 instances  
+// Device view-level: 0.0
+// [GUI Memory]: 153 MB (+488kb) [00:25:53]
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+setText(PAResourceQtoS.ReportUtilizationDialog_RESULTS_NAME, "utilization_1"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// [GUI Memory]: 164 MB (+4208kb) [00:25:56]
+// [Engine Memory]: 2,606 MB (+79484kb) [00:25:56]
+// RouteApi::initDelayMediator elapsed time: 3s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// HMemoryUtils.trashcanNow. Engine heap size: 2,780 MB. GUI used memory: 122 MB. Current time: 11/13/23, 7:18:28 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+// [Engine Memory]: 2,773 MB (+38458kb) [00:25:57]
+expandTreeTable((HResource) null, "fir_U0 (fir) ; 305 ; 322 ; 0 ; 3 ; 0 ; 0", 2); // y
+collapseTreeTable((HResource) null, "fir_U0 (fir) ; 305 ; 322 ; 0 ; 3 ; 0 ; 0", 2); // y
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false, false, false, false, false, true); // l - Double Click
+// Elapsed time: 57 seconds
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "BRAM ; 16 ; 140 ; 11.428572", 3, "BRAM", 0); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "BRAM ; 16 ; 140 ; 11.428572", 3, "BRAM", 0); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "BRAM ; 16 ; 140 ; 11.428572", 3, "BRAM", 0, false, false, false, false, true); // s - Double Click
+// [GUI Memory]: 180 MB (+7456kb) [00:27:24]
+// Elapsed time: 21 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic, Slice LUTs, LUT as Memory]", 4, true); // l - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic, Slice LUTs, LUT as Memory]", 4, true, false, false, false, false, true); // l - Double Click - Node
+expandTreeTable((HResource) null, "fir_U0 (fir) ; 1", 3); // K
+// PAPropertyPanels.initPanels (Xferloop_U0 (Xferloop)) elapsed time: 0.2s
+// Elapsed time: 13 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+expandTreeTable((HResource) null, "Xferloop_U0 (Xferloop) ; 1", 4); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false, false, false, false, false, true); // K - Double Click
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false, false, false, false, false, true); // K - Double Click
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(LUT as Memory)", "Xferloop_U0 (Xferloop) ; 1", 4, "Xferloop_U0 (Xferloop)", 0, false); // K
+// Elapsed time: 13 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile]", 9, true); // l - Node
+expandTreeTable((HResource) null, "user_bram_control_U0 (user_bram_control) ; 16", 1); // K
+selectTreeTable("PAResourceTtoZ.UtilizationInstTreeTablePanel_UTILIZATION_INST_TREE_TABLE(Block RAM Tile)", "user_bram (bram) ; 16", 2, "user_bram (bram)", 0, false); // K
+// Elapsed time: 31 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Edit Timing Constraints]", 17, false); // n
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0, false, false, false, false, true); // f - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_CREATE_CLOCK
+// 'e' command handler elapsed time: 15 seconds
+// Elapsed time: 15 seconds
+dismissDialog("Create Clock"); // aR
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0, false, false, false, false, true); // f - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_CREATE_CLOCK
+selectButton(PAResourceQtoS.SdcGetObjectsPanel_SPECIFY_CLOCK_SOURCE_OBJECTS, (String) null); // s
+// Elapsed time: 10 seconds
+setText(PAResourceEtoH.GetObjectsDialog_SPECIFY_OF_OBJECTS_OPTION, "clk"); // f
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported.  
+// Tcl Message: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported. 
+dismissDialog("Find Names"); // bA
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported.  
+// Tcl Message: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported. 
+dismissDialog("Find Names"); // bA
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported.  
+// Tcl Message: ERROR: [Common 17-697] get_ports: option '-of_objects' requires explicit objects, e.g. -of_objects [get_cells lut2], implicit search for '-of_objects' using name or pattern is not supported. 
+dismissDialog("Find Names"); // bA
+setText("pa.Finder.I/O Ports_filter_1", "clk"); // C
+setText(PAResourceEtoH.GetObjectsDialog_SPECIFY_OF_OBJECTS_OPTION, (String) null); // f
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+dismissDialog("Find Names"); // bA
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0); // f
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0, false, false, false, true, false); // f - Popup Trigger
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0); // f
+selectButton(RDIResource.HDualList_MOVE_SELECTED_ITEMS_TO_RIGHT, "moveRight"); // j
+selectButton(PAResourceEtoH.GetObjectsPanel_SET, "Set"); // a
+dismissDialog("Specify Clock Source Objects"); // s
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: POWER_CNS_STALE
+dismissDialog("Create Clock"); // aR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// Tcl Message: create_clock -period 10.000 -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*clk*" && DIRECTION == "IN" }] 
+// 'e' command handler elapsed time: 55 seconds
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+dismissDialog("Apply XDC Constraints"); // bA
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (1), Inputs (0), Set Input Delay (0)]", 12, false); // bk
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0, false, false, false, false, true); // v - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_SET_INPUT_DELAY
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_CLOCK_PIN_OR_PORT, (String) null); // s
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+dismissDialog("Find Names"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,864 MB. GUI used memory: 138 MB. Current time: 11/13/23, 7:22:54 PM CST
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0); // f
+selectButton(RDIResource.HDualList_MOVE_SELECTED_ITEMS_TO_RIGHT, "moveRight"); // j
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Specify Clock"); // s
+// Elapsed time: 27 seconds
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_LIST_OF_PORTS, (String) null); // s
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+dismissDialog("Find Names"); // bA
+selectButton(RDIResource.HDualList_MOVE_ALL_ITEMS_TO_RIGHT, "moveAllRight"); // j
+selectButton(PAResourceEtoH.GetObjectsPanel_SET, "Set"); // a
+dismissDialog("Specify Delay Objects"); // s
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_CLOCK_PIN_OR_PORT, (String) null); // s
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Specify Clock"); // s
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_LIST_OF_PORTS, (String) null); // s
+selectCheckBox(PAResourceTtoZ.TclFindDialog_IGNORE_CASE, "Ignore case", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.TclFindDialog_IGNORE_CASE, "Ignore case", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.TclFindDialog_IGNORE_CASE, "Ignore case", true); // g: TRUE
+// Elapsed time: 13 seconds
+selectList(RDIResource.HDualList_SELECTED_NAMES, "wbs_dat_i[18]", 341, false, false, false, true, false); // f - Popup Trigger
+// Elapsed time: 11 seconds
+selectButton(PAResourceEtoH.GetObjectsPanel_SET, "Set"); // a
+dismissDialog("Specify Delay Objects"); // s
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: SDC_CONSTRAINT_ADD
+// Tcl Message: set_input_delay -clock [get_clocks  "*"] 1.0 [get_ports -filter { NAME =~  "*" && DIRECTION == "IN" }] 
+// 'u' command handler elapsed time: 105 seconds
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+dismissDialog("Apply XDC Constraints"); // bA
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (2), Outputs (0), Set Output Delay (0)]", 14, false); // bk
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, " ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, (String) null, 0, false, false, false, false, true); // v - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_SET_OUTPUT_DELAY
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_CLOCK_PIN_OR_PORT_TO_WHICH_OUTPUT, (String) null); // s
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+dismissDialog("Find Names"); // bA
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0); // f
+selectList(RDIResource.HDualList_FIND_RESULTS, "wb_clk_i", 0, false, false, false, false, true); // f - Double Click
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Specify Clock"); // s
+selectButton(PAResourceItoN.IODelayCreationPanel_SPECIFY_LIST_OF_PORTS, (String) null); // s
+selectButton(PAResourceEtoH.GetObjectsDialog_FIND, "Find"); // a
+dismissDialog("Find Names"); // bA
+selectButton(RDIResource.HDualList_MOVE_ALL_ITEMS_TO_RIGHT, "moveAllRight"); // j
+selectButton(PAResourceEtoH.GetObjectsPanel_APPEND, "Append"); // a
+dismissDialog("Specify Delay Objects"); // s
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: SDC_CONSTRAINT_ADD
+// Tcl Message: set_output_delay -clock [get_clocks  "*"] 1.0 [get_ports -filter { NAME =~  "*" && DIRECTION == "OUT" }] 
+// 'B' command handler elapsed time: 28 seconds
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+dismissDialog("Apply XDC Constraints"); // bA
+// [GUI Memory]: 193 MB (+4655kb) [00:32:28]
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Inputs (1), Set Input Delay (1)]", 12, false); // bk
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Outputs (1), Set Output Delay (1)]", 14, false); // bk
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ;  ;  ; ", 0, (String) null, 4); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ;  ;  ; ", 0, (String) null, 4, false, false, false, false, true); // v - Double Click
+selectCheckBox(PAResourceItoN.IODelayCreationPanel_ADD_DELAY_INFORMATION_TO_EXISTING, "Add delay information to the existing delay (no overwrite)", true); // g: TRUE
+selectCheckBox(PAResourceItoN.IODelayCreationPanel_ADD_DELAY_INFORMATION_TO_EXISTING, "Add delay information to the existing delay (no overwrite)", false); // g: FALSE
+selectCheckBox(PAResourceItoN.IODelayCreationPanel_ADD_DELAY_INFORMATION_TO_EXISTING, "Add delay information to the existing delay (no overwrite)", true); // g: TRUE
+// Elapsed time: 25 seconds
+setText("RDIResource.CommandLinePanel_COMMAND", "set_output_delay -clock [get_clocks *] -add_delay 1.0 [get_ports -filter { NAME =~  \"*\" && DIRECTION == \"OUT\" }]"); // aa
+selectCheckBox(PAResourceItoN.IODelayCreationPanel_ADD_DELAY_INFORMATION_TO_EXISTING, "Add delay information to the existing delay (no overwrite)", false); // g: FALSE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Edit Set Output Delay"); // bw
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Clocks (1), Create Clock (1)]", 1, false); // bk
+selectTree(PAResourceTtoZ.XdcCategoryTree_XDC_CATEGORY_TREE, "[All Categories (3), Clocks (1), Create Clock (1)]", 1, false, false, false, false, false, true); // bk - Double Click
+// Run Command: PAResourceCommand.PACommandNames_XDC_CREATE_CLOCK
+dismissDialog("Create Clock"); // aR
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ;  ;  ; ", 0, "false", 5); // f
+editTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "true", 0, "Add Clock", 5); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; true ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ;  ;  ; ", 0, "true", 5); // f
+editTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "false", 0, "Add Clock", 5); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ;  ;  ; ", 0, (String) null, 1); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ;  ;  ; ", 0, (String) null, 1, false, false, false, false, true); // f - Double Click
+selectCheckBox(PAResourceAtoD.ClockCreationPanel_ADD_THIS_CLOCK_TO_EXISTING_CLOCK, "Add this clock to the existing clock (no overwriting)", true); // g: TRUE
+selectCheckBox(PAResourceAtoD.ClockCreationPanel_ADD_THIS_CLOCK_TO_EXISTING_CLOCK, "Add this clock to the existing clock (no overwriting)", false); // g: FALSE
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Edit Create Clock"); // aY
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// 'k' command handler elapsed time: 4 seconds
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 14); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 14); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false, false, false, false, false, true); // D - Double Click
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, null, -1, null, -1, false, false, false, true, false); // f - Popup Trigger
+selectMenuItem(PAResourceEtoH.EditXdcSelectableTablePanel_CREATE_CONSTRAINT, "Create Constraint"); // ar
+// Run Command: PAResourceCommand.PACommandNames_XDC_CREATE_CLOCK
+dismissDialog("Create Clock"); // aR
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+dismissDialog("Save Project"); // al
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Out of Date Design"); // A
+selectButton(PAResourceItoN.ModifiedConstraintsWithoutTargetDialog_UPDATE, "Update"); // a
+dismissDialog("Save Constraints"); // M
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "fir"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: file mkdir /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new 
+// Tcl Message: close [ open /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc w ] 
+// Tcl Message: add_files -fileset constrs_1 /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc 
+// Tcl Message: set_property target_constrs_file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc [current_fileset -constrset] 
+// TclEventType: DESIGN_SAVE
+dismissDialog("Save Constraints"); // a
+// Tcl Message: save_constraints -force 
+// TclEventType: RUN_MODIFY
+dismissDialog("Save Constraints"); // bA
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+closeView(PAResourceOtoP.PAViews_PAR_REPORT, "PAR Report"); // c
+closeView(PAResourceOtoP.PAViews_PAR_REPORT, "PAR Report"); // c
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1160] Copying file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp to /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1 and adding it to utils fileset 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:27:38 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 23 seconds
+dismissDialog("Starting Design Runs"); // bA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // D
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ag
+selectTab((HResource) null, (HResource) null, "Utilization", 5); // aL
+// TclEventType: UTILIZATION_RESULT_DELETED
+closeFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // aA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,862 MB. GUI used memory: 184 MB. Current time: 11/13/23, 7:28:18 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'r' command handler elapsed time: 3 seconds
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 6); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, wb_clk_i]", 7, true); // a - Node
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, wb_clk_i]", 7); // a
+selectButton(PAResourceItoN.IctElementSummarySectionPanel_HOLD, "-0.299 ns"); // g
+// [GUI Memory]: 203 MB (+465kb) [00:36:16]
+selectTableHeader(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "To", 6); // h
+selectTableHeader(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "To", 6); // h
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, wb_clk_i, Setup -0.391 ns]", 8, false); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 2,872 MB. GUI used memory: 141 MB. Current time: 11/13/23, 7:29:04 PM CST
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 1 ; -0.3909344 ; 4 ; 5 ; 41 ; fir_U0/Xferloop_U0/ss_state_r_reg[1]/C ; wbs_ack_o ; 6.8991895 ; 3.679475 ; 3.2197142 ; 10.0 ; wb_clk_i ; wb_clk_i ;  ; 0.03535534", 0, "-0.3909344", 1); // h
+// [Engine Memory]: 2,926 MB (+14571kb) [00:36:35]
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 1 ; -0.3909344 ; 4 ; 5 ; 41 ; fir_U0/Xferloop_U0/ss_state_r_reg[1]/C ; wbs_ack_o ; 6.8991895 ; 3.679475 ; 3.2197142 ; 10.0 ; wb_clk_i ; wb_clk_i ;  ; 0.03535534", 0, "wbs_ack_o", 6); // h
+// Elapsed time: 11 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // g
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,000 MB. GUI used memory: 133 MB. Current time: 11/13/23, 7:29:19 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,000 MB. GUI used memory: 134 MB. Current time: 11/13/23, 7:29:19 PM CST
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,986 MB. GUI used memory: 107 MB. Current time: 11/13/23, 7:29:20 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8524.289 ; gain = 0.000 ; free physical = 97705 ; free virtual = 124212 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+dismissDialog("Reloading"); // bA
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "10.0", 2); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.0 ; 0.0 ; 5.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "10.0", 2, false, false, false, false, true); // f - Double Click
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "11.0"); // b
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "12.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Create Clock"); // aY
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "4.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 4); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 4, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "4.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Output Delay"); // bw
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+dismissDialog("Save Project"); // al
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Out of Date Design"); // A
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bA
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1/user_proj_example.dcp with file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:30:04 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 56 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Elapsed time: 15 seconds
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-4.248 ns"); // g
+// [GUI Memory]: 214 MB (+52kb) [00:38:51]
+// [Engine Memory]: 3,082 MB (+10122kb) [00:38:55]
+selectTableHeader(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "To", 6); // h
+// HMemoryUtils.trashcanNow. Engine heap size: 3,094 MB. GUI used memory: 153 MB. Current time: 11/13/23, 7:31:29 PM CST
+// Elapsed time: 28 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "[get_clocks *]", 1, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Output Delay"); // bw
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // g
+// HOptionPane Warning: 'There are unsaved changes in 'Synthesized Design - synth_1' that would be lost. OK to reload? (Reload Design)'
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,101 MB. GUI used memory: 154 MB. Current time: 11/13/23, 7:32:15 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,101 MB. GUI used memory: 155 MB. Current time: 11/13/23, 7:32:15 PM CST
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,086 MB. GUI used memory: 130 MB. Current time: 11/13/23, 7:32:15 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8545.281 ; gain = 0.000 ; free physical = 97634 ; free virtual = 124141 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+dismissDialog("Reloading"); // bA
+// Elapsed time: 62 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 3); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 3, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 4.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 4.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+// Elapsed time: 17 seconds
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Output Delay"); // bw
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+// [GUI Memory]: 225 MB (+582kb) [00:41:21]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+dismissDialog("Save Project"); // al
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Out of Date Design"); // A
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints 
+// TclEventType: RUN_MODIFY
+dismissDialog("Save Constraints"); // bA
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1/user_proj_example.dcp with file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 19:34:34 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 41 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Elapsed time: 44 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+// [GUI Memory]: 236 MB (+50kb) [00:43:23]
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.5"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Edit Set Output Delay"); // bw
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.5"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "3.5"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Output Delay"); // bw
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Elapsed time: 19 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(PAResourceAtoD.CmdMsgTreeDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // e
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+// [GUI Memory]: 250 MB (+2544kb) [00:44:32]
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+dismissDialog("Rerun Timing Report"); // bA
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 41 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+// Elapsed time: 12 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 3); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, (String) null, 3, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.0"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.5"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// [GUI Memory]: 263 MB (+347kb) [00:45:51]
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // g
+// HOptionPane Warning: 'There are unsaved changes in 'Synthesized Design - synth_1' that would be lost. OK to reload? (Reload Design)'
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,105 MB. GUI used memory: 182 MB. Current time: 11/13/23, 7:38:31 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,105 MB. GUI used memory: 183 MB. Current time: 11/13/23, 7:38:31 PM CST
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,086 MB. GUI used memory: 160 MB. Current time: 11/13/23, 7:38:31 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8555.277 ; gain = 0.000 ; free physical = 97587 ; free virtual = 124096 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+dismissDialog("Reloading"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.5"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 2.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 2.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Output Delay"); // bw
+// Elapsed time: 21 seconds
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "1 ; create_clock -period 12.000 -waveform {0.000 6.000} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; ", 1, "create_clock -period 12.000 -waveform {0.000 6.000} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "1 ; create_clock -period 12.000 -waveform {0.000 6.000} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; ", 1); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "1 ; create_clock -period 12.000 -waveform {0.000 6.000} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; ", 1, "create_clock -period 12.000 -waveform {0.000 6.000} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 12.0 ; 0.0 ; 6.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "0.0", 3); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 12.0 ; 0.0 ; 6.0 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "0.0", 3, false, false, false, false, true); // f - Double Click
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "11.0"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Create Clock"); // aY
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+dismissDialog("Rerun Timing Report"); // bA
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 11.0 ; 0.0 ; 5.5 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "11.0", 2); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 11.0 ; 0.0 ; 5.5 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "11.0", 2, false, false, false, false, true); // f - Double Click
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "10.748"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Create Clock"); // aY
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Elapsed time: 17 seconds
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+expandTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false, false, false, false, false, true); // z - Double Click
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+dismissDialog("Edit Set Input Delay"); // bp
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "3 ; set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; ", 3, "set_output_delay -clock [get_clocks *] 1.0 [get_ports -filter { NAME =~  * && DIRECTION == OUT }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "3 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.0 ; [get_ports -filter { NAME =~  * && DIRECTION == OUT }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+// [GUI Memory]: 278 MB (+1655kb) [00:47:54]
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Edit Set Output Delay"); // bw
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.5 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.5 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.2"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "2 ; set_input_delay -clock [get_clocks *] 1.2 [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; ", 2, "set_input_delay -clock [get_clocks *] 1.2 [get_ports -filter { NAME =~  * && DIRECTION == IN }]", 1, false); // z
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.2 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2); // v
+selectTable(PAResourceEtoH.EditIODelayTablePanel_EDIT_IO_DELAY_TABLE, "2 ; [get_clocks *] ; rise ;  ;  ; false ; None ; 1.2 ; [get_ports -filter { NAME =~  * && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "rise", 2, false, false, false, false, true); // v - Double Click
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "2.2"); // b
+setSpinner(PAResourceItoN.IODelayCreationPanel_DELAY_VALUE, "1.299"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Set Input Delay"); // bp
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+dismissDialog("Rerun Timing Report"); // bA
+selectTreeTable(PAResourceTtoZ.XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE, "1 ; create_clock -period 10.748 -waveform {0.000 5.374} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; ", 1, "create_clock -period 10.748 -waveform {0.000 5.374} [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }]", 1, false); // z
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.748 ; 0.0 ; 5.374 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "10.748", 2); // f
+selectTable(PAResourceEtoH.EditCreateClockTablePanel_EDIT_CREATE_CLOCK_TABLE, "1 ;  ; 10.748 ; 0.0 ; 5.374 ; false ; [get_ports -filter { NAME =~  *clk* && DIRECTION == IN }] ; /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc ;  ; ", 0, "10.748", 2, false, false, false, false, true); // f - Double Click
+// Elapsed time: 14 seconds
+setSpinner(PAResourceAtoD.ClockCreationPanel_ENTER_POSITIVE_NUMBER, "10.547"); // b
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Validate XDC Command"); // bA
+dismissDialog("Edit Create Clock"); // aY
+selectButton(PAResourceTtoZ.XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS, "Apply"); // a
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTR_MGR_CLEAR
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// [GUI Memory]: 292 MB (+229kb) [00:48:57]
+dismissDialog("Apply All XDC Constraints"); // bA
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // g
+// TclEventType: TIMING_RESULTS_UNLOAD
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Out of Date Design"); // A
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bA
+// Elapsed time: 43 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,108 MB. GUI used memory: 219 MB. Current time: 11/13/23, 7:42:26 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+dismissDialog("Report Utilization"); // bA
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Instantiated Netlists]", 24, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Instantiated Netlists]", 24, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Instantiated Netlists]", 24, false, false, false, false, false, true); // l - Double Click
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Hierarchy]", 0, false); // l
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+// Device view-level: 0.0
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 812, 175, 1234, 520, false, false, false, true, false); // f - Popup Trigger
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+selectButton(PAResourceQtoS.SchematicView_ADD, "Schematic_addToSchematic"); // D
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 15 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// Elapsed time: 32 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "user_proj_example ; 374 ; 396 ; 16 ; 3 ; 297 ; 1", 0, "16", 5, true); // y - Node
+// Elapsed time: 888 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic, Slice LUTs]", 3, true); // l - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Hierarchy]", 0, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 374 ; 53200 ; 0.7030075", 0, "374", 1); // s
+// Elapsed time: 115 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 10, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("fir.v", 559, 216); // be
+// Elapsed time: 276 seconds
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "FF ; 396 ; 106400 ; 0.37218046", 2, "FF", 0); // s
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic, Slice LUTs, LUT as Memory, LUT as Distributed RAM]", 5, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic, Slice LUTs]", 3, true); // l - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic]", 2, true); // l - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 374 ; 53200 ; 0.7030075", 0, "374", 1, false, true, false, false, false); // s - Control Key
+// Elapsed time: 291 seconds
+selectCodeEditor("fir.v", 480, 282); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_bram_control.v", 2); // m
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 7); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), tap_RAM : bram11 (bram11.v)]", 8, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 58 seconds
+selectCodeEditor("user_proj_example.counter.v", 431, 281); // be
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, fir.xdc]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, fir.xdc]", 4, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("fir.xdc", 585, 71); // be
+typeControlKey((HResource) null, "fir.xdc", 'c'); // be
+selectCodeEditor("fir.xdc", 443, 283); // be
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectCodeEditor("fir.v", 805, 131); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 3,113 MB. GUI used memory: 222 MB. Current time: 11/13/23, 8:12:29 PM CST
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+dismissDialog("Report Timing Summary"); // aJ
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 5); // m
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 374 ; 53200 ; 0.7030075", 0, "LUT", 0); // s
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Slice Logic]", 2, true); // l - Node
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "DSP ; 3 ; 220 ; 1.3636364", 4, "220", 2); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 374 ; 53200 ; 0.7030075", 0, "LUT", 0); // s
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_bram_control.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_proj_example.counter.v", 3); // m
+selectCodeEditor("user_proj_example.counter.v", 202, 50); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("user_proj_example.counter.v", 33, 103); // be
+selectCodeEditor("user_proj_example.counter.v", 2, 112); // be
+typeControlKey((HResource) null, "user_proj_example.counter.v", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1/user_proj_example.dcp with file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 20:13:49 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,118 MB. GUI used memory: 208 MB. Current time: 11/13/23, 8:13:58 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,118 MB. GUI used memory: 209 MB. Current time: 11/13/23, 8:13:58 PM CST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,114 MB. GUI used memory: 183 MB. Current time: 11/13/23, 8:14:20 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8556.945 ; gain = 0.000 ; free physical = 95629 ; free virtual = 122181 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8556.945 ; gain = 0.000 ; free physical = 95569 ; free virtual = 122121 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 64 instances were transformed.   RAM16X1S => RAM32X1S (RAMS32): 64 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+setText(PAResourceTtoZ.TimingDialogUtils_RESULTS_NAME, "timing_1"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_bram_control.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_proj_example.counter.v", 3); // m
+selectCodeEditor("user_proj_example.counter.v", 127, 197); // be
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,134 MB. GUI used memory: 224 MB. Current time: 11/13/23, 8:14:56 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "DSP ; 3 ; 220 ; 1.3636364", 4, "3", 1); // s
+selectCodeEditor("user_proj_example.counter.v", 788, 186); // be
+selectCodeEditor("user_proj_example.counter.v", 126, 202); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), user_bram_control_U0 : user_bram_control (user_bram_control.v)]", 12); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 10, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 10); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v), Xferloop_U0 : Xferloop (Xferloop.v)]", 12, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v), Xferloop_U0 : Xferloop (Xferloop.v)]", 12, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+typeControlKey((HResource) null, "Xferloop.v", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Xferloop.v", 382, 187); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1/user_proj_example.dcp with file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 20:15:41 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,153 MB. GUI used memory: 211 MB. Current time: 11/13/23, 8:15:42 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,153 MB. GUI used memory: 212 MB. Current time: 11/13/23, 8:15:42 PM CST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Mon Nov 13 20:15:48 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 33 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ag
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_bram_control.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectButton(RDIResourceCommand.RDICommands_SETTINGS, "user_proj_example"); // g
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+dismissDialog("Settings"); // d
+// [GUI Memory]: 313 MB (+6928kb) [01:24:10]
+// [GUI Memory]: 332 MB (+2888kb) [01:24:11]
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,153 MB. GUI used memory: 195 MB. Current time: 11/13/23, 8:16:59 PM CST
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8590.977 ; gain = 0.000 ; free physical = 95556 ; free virtual = 122110 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 178 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8590.977 ; gain = 0.000 ; free physical = 95495 ; free virtual = 122049 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 64 instances were transformed.   RAM16X1S => RAM32X1S (RAMS32): 64 instances  
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+dismissDialog("Report Utilization"); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 3,196 MB. GUI used memory: 244 MB. Current time: 11/13/23, 8:17:09 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aL
+selectTab((HResource) null, (HResource) null, "Utilization", 5); // aL
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+// HMemoryUtils.trashcanNow. Engine heap size: 3,196 MB. GUI used memory: 242 MB. Current time: 11/13/23, 8:47:09 PM CST
+// Elapsed time: 3032 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aj
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aj
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 241 MB. Current time: 11/13/23, 9:17:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 241 MB. Current time: 11/13/23, 9:47:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/13/23, 10:17:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/13/23, 10:47:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/13/23, 11:17:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/13/23, 11:47:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 12:17:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 12:47:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 1:17:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 1:47:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 2:17:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 2:47:10 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 3:17:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 3:47:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 4:17:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 4:47:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 5:17:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 5:47:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 6:17:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 6:47:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 7:17:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 7:47:11 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 8:17:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 8:47:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 9:17:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 9:47:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 10:17:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 10:47:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 11:17:12 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 11:47:12 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2211775 ms.
+// Thread: Thread-111
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.k.c.z.hWs(SourceFile:144)
+// 	at ui.k.c.z$$Lambda$330/0x0000000800c3d840.run(Unknown Source)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Common-Cleaner
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// 	at java.base@11.0.11/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+// Thread: SyntheticaCleanerThread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1902)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: pool-6-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+// 	at java.base@11.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Life support thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.l.run(SourceFile:82)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: hw_ila_monitor
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.Object.wait(Object.java:328)
+// 	at java.base@11.0.11/java.util.TimerThread.mainLoop(Timer.java:527)
+// 	at java.base@11.0.11/java.util.TimerThread.run(Timer.java:506)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: pool-1-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Watchdog Thread for com.sigasi.lsp.server.BootstrappedLspServer
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.B.run(SourceFile:66)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.z.aXK(SourceFile:2513)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Java2D Disposer
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.desktop@11.0.11/sun.java2d.Disposer.run(Disposer.java:144)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Protocol translation thread 0
+// 	at java.base@11.0.11/java.net.SocketInputStream.socketRead0(Native Method)
+// 	at java.base@11.0.11/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+// 	at java.base@11.0.11/java.net.SocketInputStream.read(SocketInputStream.java:168)
+// 	at java.base@11.0.11/java.net.SocketInputStream.read(SocketInputStream.java:140)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1364)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:973)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:880)
+// 	at com.sigasi.hdt.epl.lsp4j.PatchedStreamMessageProducer.listen(PatchedStreamMessageProducer.java:79)
+// 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+// 	at java.base@11.0.11/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+// 	at java.base@11.0.11/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: AWT-Shutdown
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.Object.wait(Object.java:328)
+// 	at java.desktop@11.0.11/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: pool-3-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: TimerQueue
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.11/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+// 	at java.desktop@11.0.11/javax.swing.TimerQueue.run(TimerQueue.java:171)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.F.aXK(SourceFile:373)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: ErrorGobbler
+// 	at java.base@11.0.11/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.11/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.11/java.io.InputStreamReader.read(InputStreamReader.java:181)
+// 	at java.base@11.0.11/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.11/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.11/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.11/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.11/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.utils.lnf.b.run(SourceFile:100)
+// Thread: Timer-7
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.11/java.util.TimerThread.run(Timer.java:506)
+// Thread: Timer-3
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.util.TimerThread.mainLoop(Timer.java:553)
+// 	at java.base@11.0.11/java.util.TimerThread.run(Timer.java:506)
+// Thread: AWT-XAWT
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:885)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:917)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1240)
+// 	at java.base@11.0.11/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:267)
+// 	at java.desktop@11.0.11/sun.awt.SunToolkit.awtLock(SunToolkit.java:195)
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.run(XToolkit.java:684)
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.run(XToolkit.java:648)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: AWT-EventQueue-0
+// 	at java.desktop@11.0.11/sun.awt.X11.XlibWrapper.XFlush(Native Method)
+// 	at java.desktop@11.0.11/sun.awt.X11.XComponentPeer.pSetCursor(XComponentPeer.java:706)
+// 	at java.desktop@11.0.11/sun.awt.X11.XGlobalCursorManager.setCursor(XGlobalCursorManager.java:89)
+// 	at java.desktop@11.0.11/sun.awt.GlobalCursorManager._updateCursor(GlobalCursorManager.java:205)
+// 	at java.desktop@11.0.11/sun.awt.GlobalCursorManager.updateCursorImmediately(GlobalCursorManager.java:95)
+// 	at java.desktop@11.0.11/sun.awt.X11.XComponentPeer.updateCursorImmediately(XComponentPeer.java:678)
+// 	at java.desktop@11.0.11/java.awt.Component.updateCursorImmediately(Component.java:3225)
+// 	at java.desktop@11.0.11/java.awt.Container.validate(Container.java:1669)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$3.run(RepaintManager.java:745)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$3.run(RepaintManager.java:743)
+// 	at java.base@11.0.11/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@11.0.11/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager.validateInvalidComponents(RepaintManager.java:742)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1889)
+// 	at java.desktop@11.0.11/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+// 	at java.desktop@11.0.11/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+// 	at java.desktop@11.0.11/java.awt.EventQueue$4.run(EventQueue.java:721)
+// 	at java.desktop@11.0.11/java.awt.EventQueue$4.run(EventQueue.java:715)
+// 	at java.base@11.0.11/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@11.0.11/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+// 	at java.desktop@11.0.11/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+// 	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aXK(SourceFile:225)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: ForkJoinPool.commonPool-worker-23
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+// Thread: Thread-1
+// Thread: process reaper
+// 	at java.base@11.0.11/java.lang.ProcessHandleImpl.waitForProcessExit0(Native Method)
+// 	at java.base@11.0.11/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:138)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: pool-2-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@11.0.11/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@11.0.11/java.lang.Thread.getAllStackTraces(Thread.java:1653)
+// 	at ui.utils.d.c.ieu(SourceFile:589)
+// 	at ui.frmwork.a.e.aXK(SourceFile:144)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Reference Handler
+// 	at java.base@11.0.11/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+// 	at java.base@11.0.11/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at com.jidesoft.plaf.synthetica.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:99)
+// Thread: main
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1160)
+// 	at ui.PlanAhead.jswMain(SourceFile:1207)
+// Thread: Attach Listener
+// Thread: Process Messages Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.c.h.aXK(SourceFile:133)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: pool-7-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Finalizer
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.base@11.0.11/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+// Thread: Batik CleanerThread
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: EMF Reference Cleaner
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aXK(SourceFile:225)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: OutputGobbler
+// 	at java.base@11.0.11/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.11/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.11/java.io.InputStreamReader.read(InputStreamReader.java:181)
+// 	at java.base@11.0.11/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.11/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.11/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.11/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.11/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 241 MB. Current time: 11/14/23, 12:30:02 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 1:00:02 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 1:30:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 2:00:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,197 MB. GUI used memory: 240 MB. Current time: 11/14/23, 2:30:03 PM CST
+// Elapsed time: 63150 seconds
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+selectCodeEditor("user_bram_control.v", 377, 221); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_proj_example.counter.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bram.v", 3); // m
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir)]", 4); // bD
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, false); // bD
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true, false, false, false, false, true); // bD - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 3,198 MB. GUI used memory: 239 MB. Current time: 11/14/23, 2:40:33 PM CST
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true); // bD - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true, false, false, false, false, true); // bD - Double Click - Node
+selectCodeEditor("bram.v", 333, 133); // be
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), axi_lite_control_U0 (axi_lite_control)]", 7, false); // bD
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), axi_lite_control_U0 (axi_lite_control)]", 7, true, false, false, false, false, true); // bD - Double Click - Node
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), axi_lite_control_U0 (axi_lite_control)]", 7); // bD
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true); // bD - Node
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8); // bD
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true); // bD - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true, false, false, false, false, true); // bD - Double Click - Node
+selectCodeEditor("bram.v", 518, 87); // be
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true); // bD - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true, false, false, false, false, true); // bD - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[user_proj_example, fir_U0 (fir), Xferloop_U0 (Xferloop)]", 8, true); // bD - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v), Xferloop_U0 : Xferloop (Xferloop.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v), Xferloop_U0 : Xferloop (Xferloop.v)]", 6, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("Xferloop.v", 128, 5); // be
+selectCodeEditor("Xferloop.v", 279, 156); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Xferloop.v", 653, 200); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/utils_1/imports/synth_1/user_proj_example.dcp with file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/user_proj_example.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Tue Nov 14 14:41:09 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,198 MB. GUI used memory: 229 MB. Current time: 11/14/23, 2:41:11 PM CST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,198 MB. GUI used memory: 230 MB. Current time: 11/14/23, 2:41:11 PM CST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 55 seconds
+dismissDialog("Synthesis Completed"); // ag
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Timing Summary]", 19, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,192 MB. GUI used memory: 203 MB. Current time: 11/14/23, 2:42:14 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8630.840 ; gain = 0.000 ; free physical = 93328 ; free virtual = 120334 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc:3] 
+// Tcl Message: Finished Parsing XDC File [/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-caravel_fir/vvd_fir/project_1/project_1.srcs/constrs_1/new/fir.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8630.840 ; gain = 0.000 ; free physical = 93268 ; free virtual = 120274 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 64 instances were transformed.   RAM16X1S => RAM32X1S (RAMS32): 64 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_REPORT_TIMING_SUMMARY
+setText(PAResourceTtoZ.TimingDialogUtils_RESULTS_NAME, "timing_1"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Timing Summary"); // aJ
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Tcl Message: report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs 
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Timer Settings]", 1, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Clock Summary]", 3, false); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 3,209 MB. GUI used memory: 238 MB. Current time: 11/14/23, 3:12:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,209 MB. GUI used memory: 237 MB. Current time: 11/14/23, 3:42:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,209 MB. GUI used memory: 237 MB. Current time: 11/14/23, 4:12:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,209 MB. GUI used memory: 237 MB. Current time: 11/14/23, 4:42:18 PM CST
+// Elapsed time: 7762 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+dismissDialog("Report Utilization"); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 244 MB. Current time: 11/14/23, 4:51:46 PM CST
+// Tcl Message: report_utilization -name utilization_1 
+dismissDialog("Report Utilization"); // bA
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+// Elapsed time: 1683 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v), fir_U0 : fir (fir.v)]", 4); // D
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+dismissDialog("Opening Editor"); // bA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 5:21:48 PM CST
+// Elapsed time: 157 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_proj_example (user_proj_example.counter.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("user_proj_example.counter.v", 124, 105); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 5:51:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 6:21:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 6:51:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 7:21:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 7:51:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 8:21:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 8:51:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 9:21:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 9:51:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 10:21:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 10:51:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 11:21:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/14/23, 11:51:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 12:21:49 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 12:51:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 1:21:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 1:51:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 2:21:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 2:51:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 3:21:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 3:51:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 4:21:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 4:51:50 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 5:21:50 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  28602981 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 255 MB. Current time: 11/15/23, 1:29:05 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 1:59:06 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 2:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 2:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 3:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 3:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 4:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 4:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 5:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 5:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 6:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 6:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 7:29:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 7:59:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 8:29:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 8:59:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 9:29:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 9:59:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 243 MB. Current time: 11/15/23, 10:29:08 PM CST

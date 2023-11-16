@@ -11,6 +11,10 @@ riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
 riscv32-unknown-elf-objcopy -O verilog counter_la_fir.elf counter_la_fir.hex
 riscv32-unknown-elf-objdump -D counter_la_fir.elf > counter_la_fir.out
 
+# riscv32-unknown-elf-gcc -I../../firmware -o counter_la_fir.elf ../counter_la_fir/fir.c ../counter_la_fir/counter_la_fir.c
+# riscv32-unknown-elf-objcopy -O verilog counter_la_fir.elf counter_la_fir.hex
+# riscv32-unknown-elf-objdump -D counter_la_fir.elf > counter_la_fir.out
+
 # to fix flash base address
 sed -ie 's/@10/@00/g' counter_la_fir.hex
 

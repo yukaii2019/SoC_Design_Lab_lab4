@@ -6,6 +6,12 @@
 -v ../../rtl/user/user_project_wrapper.v
 -v ../../rtl/user/user_proj_example.counter.v
 -v ../../rtl/user/bram.v
+-v ../../rtl/user/axi_lite_control.v
+-v ../../rtl/user/bram11.v
+-v ../../rtl/user/fir.v
+-v ../../rtl/user/user_bram_control.v
+-v ../../rtl/user/wb_to_axi.v
+-v ../../rtl/user/Xferloop.v
 
 ## VIP
 -v ../../vip/tbuart.v
