@@ -1,38 +1,10 @@
-# WorkLoad Optimize SOC (WLOS) Baseline
+# SoC Lab Lab6
 
-### Simulation for matrix multiplication
-```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/counter_la_mm
-source run_clean
-source run_sim
-```
+## File Path
+* design.v source: rtl/user/*.v 
+* firware source: testbench/counter_la_all.c
+* vivado project: vivado/vvd_caravel_fpga
+* jupyter notebook: vivado/jupyter_notebook
 
-### Simulation for FIR
-```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/counter_la_fir
-source run_clean
-source run_sim
-```
-
-### Simulation for qsort
-```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/counter_la_qs
-source run_clean
-source run_sim
-```
-
-### Simulation for uart
-```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/uart
-source run_clean
-source run_sim
-```
-
-## Verification with Vivado
-### Synthesis and Generate bitstream
-```sh
-cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/vivado
-source run_vivado
-```
-
-
+## How to replicate
+upload all file in the vivado/jupyter_notebook directory to pynq_z2, then run the jupyter notebook.
