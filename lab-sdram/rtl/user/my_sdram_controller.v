@@ -24,22 +24,20 @@ module sdram_controller (
         input   rw,                 // 1 = write, 0 = read
         input   [31:0] data_in,     // data from a read
         output  [31:0] data_out,    // data for a write
-        output  busy,               // controller is busy when high
+        output  busy,     // unsed now          // controller is busy when high
         input   in_valid,           // pulse high to initiate a read/write
         output  out_valid           // pulses high when data from read is valid
     );
 
     // Jiin: SDRAM Timing  3-3-3, i.e. CASL=3, PRE=3, ACT=3
-    localparam tCASL            = 13'd2;       // 3T actually
-    localparam tPRE             = 13'd2;       // 3T
-    localparam tACT             = 13'd2;       // 3T
-    localparam tREF             = 13'd6;       // 7T
-    localparam tRef_Counter     = 10'd750;     // 
+    localparam tCASL            = 2;       // 3T actually
+    localparam tPRE             = 2;       // 3T
+    localparam tACT             = 2;       // 3T
+    localparam tREF             = 6;       // 7T
+    localparam tRef_Counter     = 750;     // 
+    localparam PREFETCH_NUM     = 3; // include the first data 
+    localparam tREAD            = tCASL + PREFETCH_NUM; 
 
-    // MA Map
-    // BA (Bank Address) - 9:8
-    // RA (Row Address)  - 22:10
-    // CA (Col Address)  - 2'b0, 1'b0, <7:0>, 2'b0
     `define BA      9:8
     `define RA      22:10
     `define CA      7:0
@@ -78,11 +76,11 @@ module sdram_controller (
     wire [7:0]  Mapped_CA;
     wire [22:0] addr;
 
-    reg ready_d, ready_q;
+    // reg ready_d, ready_q;
 
-    reg        saved_rw_q;
-    reg [22:0] saved_addr_q;
-    reg [31:0] saved_data_q;
+    // reg        saved_rw_q;
+    // reg [22:0] saved_addr_q;
+    // reg [31:0] saved_data_q;
 
     
 
@@ -90,11 +88,11 @@ module sdram_controller (
     reg [3:0]  cmd_d,   cmd_q;
     reg [1:0]  ba_d,    ba_q;
     reg [12:0] a_d,     a_q;
-    reg        dq_en_q;
+    // reg        dq_en_q;
     reg [31:0] dq_q;
     reg        dqm_q;
     
-
+    reg[15:0] delay_cnt_q, delay_cnt_d;
 
 
     reg [15:0] delay_ctr_d, delay_ctr_q;
@@ -118,46 +116,47 @@ module sdram_controller (
     reg [12:0] row_addr_d[3:0], row_addr_q[3:0];
     
 
-
-
     assign Mapped_RA = user_addr[`RA];
     assign Mapped_BA = user_addr[`BA];
     assign Mapped_CA = user_addr[`CA];
     assign addr = {Mapped_RA, Mapped_BA, Mapped_CA};
 
-    always@(*)begin
-        if(state_q == INIT)begin
-            ready_d = 1;
-        end
-        else begin
-            if(state_q == IDLE && ~refresh_flag_q && ~ready_q)begin
-                ready_d = 1;
-            end
-            else begin
-                ready_d = (ready_q && in_valid)? 1'b0 : ready_q; 
-            end
-        end
-    end
+    // always@(*)begin
+    //     if(state_q == INIT)begin
+    //         ready_d = 1;
+    //     end
+    //     else begin
+    //         if(state_q == IDLE && ~refresh_flag_q && ~ready_q)begin
+    //             ready_d = 1;
+    //         end
+    //         else begin
+    //             ready_d = (ready_q && in_valid)? 1'b0 : ready_q; 
+    //         end
+    //     end
+    // end
 
-    always@(posedge clk)begin
-        if(rst) begin
-            ready_q <= 1'b0;
-        end 
-        else begin
-            ready_q <= ready_d;
-        end
-    end
+    // always@(posedge clk)begin
+    //     if(rst) begin
+    //         ready_q <= 1'b0;
+    //     end 
+    //     else begin
+    //         ready_q <= ready_d;
+    //     end
+    // end
 
-    assign busy = !ready_q;
+    // assign busy = !ready_q;
 
-    always@(posedge clk)begin
-        if(ready_q && in_valid)begin
-            saved_addr_q <= addr;
-            saved_rw_q   <= rw;
-            saved_data_q <= data_in;
-        end
-    end
+    // always@(posedge clk)begin
+    //     // if(ready_q && in_valid)begin
+    //     if(in_valid)begin
+    //         saved_addr_q <= addr;
+    //         saved_rw_q   <= rw;
+    //         saved_data_q <= data_in;
+    //     end
+    // end
 
+    // clock enable for SDRAM
+    // follow TA's implementation.
     always@(posedge clk)begin
         if(rst)begin
             cle_q <= 1'b0;
@@ -197,24 +196,24 @@ module sdram_controller (
                 ba_d = 2'b0;
             end
             ACTIVATE: begin
-                a_d = saved_addr_q[`RA];
-                ba_d = saved_addr_q[`BA];
+                a_d = addr[`RA];
+                ba_d = addr[`BA];
             end
             READ: begin
-                a_d = {2'b0, 1'b0, saved_addr_q[`CA], 2'b0};
-                ba_d = saved_addr_q[`BA];
+                a_d = {2'b0, 1'b0, addr[`CA], 2'b0} + {delay_cnt_q, 2'd0, 2'd0};
+                ba_d = addr[`BA];
             end
             WRITE: begin
-                a_d = {2'b0, 1'b0, saved_addr_q[`CA], 2'b00};
-                ba_d = saved_addr_q[`BA];
+                a_d = {2'b0, 1'b0, addr[`CA], 2'b00};
+                ba_d = addr[`BA];
             end
             PRECHARGE: begin
                 a_d[10] = precharge_bank_q[2]; // all banks
                 ba_d = precharge_bank_q[1:0];
             end
             default:begin
-                a_d = a_q;
-                ba_d = ba_q;
+                a_d = 0;
+                ba_d = 0;
             end
         endcase
     end
@@ -225,19 +224,21 @@ module sdram_controller (
         a_q <= a_d;
     end
 
-    always@(posedge clk)begin
-        if(rst)begin
-            dq_en_q <= 1'b0;
-        end
-        else begin
-            dq_en_q <= (state_q == WRITE) ? 1'b1 : 1'b0;;
-        end
-    end
+    // always@(posedge clk)begin
+    //     if(rst)begin
+    //         dq_en_q <= 1'b0;
+    //     end
+    //     else begin
+    //         dq_en_q <= (state_q == WRITE) ? 1'b1 : 1'b0;;
+    //     end
+    // end
 
     always@(posedge clk)begin
-        dq_q <= (state_q == WRITE) ? saved_data_q : dq_q;
+        dq_q <= data_in;
+        // dq_q <= (state_q == WRITE) ? data_in : dq_q;
     end
 
+    // unknown signal
     always@(posedge clk)begin
         dqm_q <= 1'b0;
     end 
@@ -252,16 +253,14 @@ module sdram_controller (
     assign sdram_ba  = ba_q;
     assign sdram_a   = a_q;
     assign sdram_dqm = dqm_q;
-    assign sdram_dqo = (dq_en_q) ? dq_q : 32'hZZZZZZZZ;
+    //assign sdram_dqo = (dq_en_q) ? dq_q : 32'hZZZZZZZZ;
+    assign sdram_dqo = dq_q;
 
+    
 
-
-    // reg ref_q;
-    // reg[15:0] delay_cnt_q, delay_cnt_d;
-
-    // always@(posedge clk)begin
-    //     delay_cnt_q <= delay_cnt_d; 
-    // end
+    always@(posedge clk)begin
+        delay_cnt_q <= delay_cnt_d; 
+    end
 
     // always@(posedge clk)begin
     //     if(state_q == IDLE && refresh_flag_q)begin
@@ -395,28 +394,44 @@ module sdram_controller (
         delay_ctr_q <= delay_ctr_d;
     end
 
+    reg [20:0] pref_based_addr_q, pref_based_addr_d;
+
+    always@(posedge clk)begin
+        pref_based_addr_q <= pref_based_addr_d;
+    end
+
+
+
 
     always@(*)begin
+        delay_cnt_d = delay_cnt_q;
+        pref_based_addr_d = pref_based_addr_q;
+        next_state_d = next_state_q;
+        state_d = state_q;
+
         case (state_q)
             INIT: begin
-                state_d = WAIT;
-                next_state_d = IDLE;
+                state_d = IDLE;
+                pref_based_addr_d = 0;
             end
             WAIT: begin
                 state_d = (delay_ctr_q == 13'd0) ? next_state_q : state_q;
-                next_state_d = next_state_q;
+                delay_cnt_d = 0; 
             end
-
             IDLE: begin
                 if (refresh_flag_q) begin
                     state_d = PRECHARGE;
                     next_state_d = REFRESH;
                 end 
-                else if (!ready_q) begin // operation waiting
-                    if (row_open_q[saved_addr_q[`BA]]) begin // if the row is open we don't have to activate it
-                        if (row_addr_q[saved_addr_q[`BA]] == saved_addr_q[`RA]) begin // Row is already open
-                            state_d = (saved_rw_q) ? WRITE : READ; 
-                            next_state_d = next_state_q;
+                else if (in_valid)begin
+                    if(~rw && in_pref_buf_flg)begin
+                        state_d = IDLE;
+                        delay_cnt_d = delay_cnt_q + 1; 
+                    end
+                    else if (row_open_q[addr[`BA]]) begin // if the row is open we don't have to activate it
+                        if (row_addr_q[addr[`BA]] == addr[`RA]) begin // Row is already open
+                            state_d = (rw) ? WRITE : READ; 
+                            delay_cnt_d = 0; 
                         end
                         else begin // A different row in the bank is open
                             state_d = PRECHARGE; // precharge open row
@@ -425,12 +440,7 @@ module sdram_controller (
                     end 
                     else begin
                         state_d = ACTIVATE; // no rows open
-                        next_state_d = next_state_q;
                     end
-                end
-                else begin
-                    state_d = state_q;
-                    next_state_d = next_state_q;
                 end
             end
             REFRESH: begin
@@ -440,31 +450,34 @@ module sdram_controller (
 
             ACTIVATE: begin
                 state_d = WAIT;
-                next_state_d = (saved_rw_q) ? WRITE : READ;
+                next_state_d = (rw) ? WRITE : READ;
             end
 
             READ: begin
+                pref_based_addr_d = addr[22:2];
+                if(delay_cnt_q == tREAD)begin
+                    //state_d = READ_RES; 
+                    state_d = IDLE; 
+                end
+                else begin
+                    state_d = READ; 
+                   
+                end
+                delay_cnt_d = delay_cnt_q + 1; 
+                 
+                // next_state_d = READ_RES;
+            end
+            
+            PRECHARGE: begin
                 state_d = WAIT;
-                next_state_d = READ_RES;
+            end  
 
-            end
-            READ_RES: begin
-                state_d = IDLE;
-                next_state_d = next_state_q;
-            end
+            // READ_RES: begin
+            //     state_d = IDLE;
+            // end
 
             WRITE: begin
                 state_d = IDLE;
-                next_state_d = next_state_q;
-            end
-
-            PRECHARGE: begin
-                state_d = WAIT;
-                next_state_d = next_state_q;
-            end  
-            default:begin
-                state_d = INIT;
-                next_state_d = next_state_q;
             end
         endcase
     end
@@ -538,24 +551,99 @@ module sdram_controller (
     //     end  
     // end
 
-    always@(posedge clk)begin
-        dqi_q <= sdram_dqi;
-    end
-    always@(posedge clk)begin
-        data_q <= (state_q == READ_RES)? dqi_q : data_q;
-        out_valid_q <= (state_q == READ_RES)? 1: 0;
-    end
-    assign data_out = data_q;   
-    assign out_valid = out_valid_q;
 
+    reg [31:0] prefetch_buf[0:PREFETCH_NUM-1];
+
+    // reg [31:0] prefetch_buf_0;
+    // reg [31:0] prefetch_buf_1;
+    // reg [31:0] prefetch_buf_2;
+    // reg [31:0] prefetch_buf_3;
+
+    reg [$clog2(PREFETCH_NUM)-1:0] pref_cnt;
+    reg pref_flg;
+    
+    wire in_pref_buf_flg;
+    wire [20:0] addr_diff;
+    wire read_valid;
+
+    assign in_pref_buf_flg  =  (addr_diff < PREFETCH_NUM) && (addr_diff >= 0);
+    assign addr_diff = addr[22:2] - pref_based_addr_q;
+    assign read_valid = delay_cnt_q >= tREAD;
+    
+    always@(posedge clk)begin
+        if(delay_cnt_q == tCASL + 1)begin
+            // dqi_q <= sdram_dqi;
+            pref_cnt <= 1;
+            pref_flg <= 1;
+            prefetch_buf[0] <= sdram_dqi;
+        end
+        else if (pref_flg == 1)begin
+            // case(pref_cnt)
+            //     1:begin
+            //         prefetch_buf_1 <= sdram_dqi;
+            //     end
+            //     2:begin
+            //         prefetch_buf_2 <= sdram_dqi;
+            //     end
+            //     3:begin
+            //         prefetch_buf_3 <= sdram_dqi;
+            //     end
+            // endcase
+            prefetch_buf[pref_cnt] <= sdram_dqi;
+            pref_cnt <= pref_cnt + 1;
+            if(pref_cnt == PREFETCH_NUM-1)begin
+                pref_flg <= 0;
+            end
+        end
+    end
+
+
+    always@(posedge clk)begin
+        // if(state_q == IDLE && ready_q && in_pref_buf_flg && ~rw)begin
+        //     // case(addr_diff)
+        //     //     1:begin
+        //     //         data_q <= prefetch_buf_1;
+        //     //     end
+        //     //     2:begin
+        //     //         data_q <= prefetch_buf_2;
+        //     //     end
+        //     //     3:begin
+        //     //         data_q <= prefetch_buf_3;
+        //     //     end
+        //     // endcase
+        //     data_q<=prefetch_buf[addr_diff[1:0]];
+        //     out_valid_q <= 0;
+        // end
+        // else if (state_q == READ && delay_cnt_q == tCASL+2) begin
+        //     data_q <= dqi_q;
+        //     out_valid_q <= 1;
+        // end
+        // else begin
+        //     data_q <= data_q;
+        //     out_valid_q <= 0;
+        // end
+
+
+        // data_q <= (state_q == READ && delay_cnt_q == tCASL+2)? dqi_q : data_q;
+        out_valid_q <= (state_q == READ && delay_cnt_q == tCASL+2)? 1: 0;
+        // data_q <= (state_q == READ_RES)? dqi_q : data_q;
+        // out_valid_q <= (state_q == READ_RES)? 1: 0;
+    end
+
+    assign data_out = prefetch_buf[addr_diff[1:0]];   
+    // assign data_out = data_q;   
+    // assign out_valid = (in_valid && ~rw && in_pref_buf_flg) ? 1 : out_valid_q | (state_q == WRITE);
+    assign out_valid = (in_valid & ~rw & in_pref_buf_flg & read_valid) | (state_q == WRITE); 
+    // wire out_valid_test = (in_valid & ~rw & in_pref_buf_flg & read_valid) | (state_q == WRITE); 
+    // assign out_valid = out_valid_q;
 
 
     always@(*)begin
         if(state_q == IDLE && refresh_flag_q)begin
             precharge_bank_d = 3'b100; // all banks
         end
-        else if(row_open_q[saved_addr_q[`BA]] && ~(row_addr_q[saved_addr_q[`BA]] == saved_addr_q[`RA])) begin
-            precharge_bank_d = {1'b0, saved_addr_q[9:8]}; 
+        else if(row_open_q[addr[`BA]] && ~(row_addr_q[addr[`BA]] == addr[`RA])) begin
+            precharge_bank_d = {1'b0, addr[9:8]}; 
         end
         else begin
             precharge_bank_d = precharge_bank_q;
@@ -576,8 +664,8 @@ module sdram_controller (
             row_open_d = 4'b0;
         end
         else if(state_q == ACTIVATE)begin
-            row_open_d[saved_addr_q[`BA]] = 1'b1; // row is now open
-            row_addr_d[saved_addr_q[`BA]] = saved_addr_q[`RA];
+            row_open_d[addr[`BA]] = 1'b1; // row is now open
+            row_addr_d[addr[`BA]] = addr[`RA];
         end
         else if (state_q == PRECHARGE)begin
             if (precharge_bank_q[2]) begin
