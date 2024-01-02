@@ -90,19 +90,21 @@ module user_proj_example #(
     wire [31:0] c2d_data;
     wire [3:0]  bram_mask;
 
-    wire [22:0] ctrl_addr;
+    wire [31:0] ctrl_addr;
     wire ctrl_busy;
     wire ctrl_in_valid, ctrl_out_valid;
 
-    reg ctrl_in_valid_q;
+    // reg ctrl_in_valid_q;
     
     // WB MI A
     
     assign valid = wbs_stb_i && wbs_cyc_i;
-    assign ctrl_in_valid = wbs_we_i ? valid : ~ctrl_in_valid_q && valid;
-    assign wbs_ack_o = (wbs_we_i) ? ~ctrl_busy && valid : ctrl_out_valid; 
+    assign ctrl_in_valid = valid;
+    // assign ctrl_in_valid = wbs_we_i ? valid : ~ctrl_in_valid_q && valid;
+    //assign wbs_ack_o = (wbs_we_i) ? ~ctrl_busy && valid : ctrl_out_valid; 
+    assign wbs_ack_o = ctrl_out_valid; 
     assign bram_mask = wbs_sel_i & {4{wbs_we_i}};
-    assign ctrl_addr = wbs_adr_i[22:0];
+    assign ctrl_addr = wbs_adr_i;
 
     // IO
     assign io_out = d2c_data;
@@ -118,17 +120,17 @@ module user_proj_example #(
     assign rst = (~la_oenb[65]) ? la_data_in[65]: wb_rst_i;
     assign rst_n = ~rst;
 
-    always @(posedge clk) begin
-        if (rst) begin
-            ctrl_in_valid_q <= 1'b0;
-        end
-        else begin
-            if (~wbs_we_i && valid && ~ctrl_busy && ctrl_in_valid_q == 1'b0)
-                ctrl_in_valid_q <= 1'b1;
-            else if (ctrl_out_valid)
-                ctrl_in_valid_q <= 1'b0;
-        end
-    end
+    // always @(posedge clk) begin
+    //     if (rst) begin
+    //         ctrl_in_valid_q <= 1'b0;
+    //     end
+    //     else begin
+    //         if (~wbs_we_i && valid && ~ctrl_busy && ctrl_in_valid_q == 1'b0)
+    //             ctrl_in_valid_q <= 1'b1;
+    //         else if (ctrl_out_valid)
+    //             ctrl_in_valid_q <= 1'b0;
+    //     end
+    // end
 
     sdram_controller user_sdram_controller (
         .clk(clk),

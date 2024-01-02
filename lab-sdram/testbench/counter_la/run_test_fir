@@ -1,0 +1,3 @@
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 -o test_fir.vvp test_fir.v ../../rtl/user/fir_new.v
+vvp test_fir.vvp
+rm -f test_fir.vvp

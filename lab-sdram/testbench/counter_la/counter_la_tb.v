@@ -153,14 +153,64 @@ module counter_la_tb;
 		$display("%c[0m",27);
 		$finish;
 	end
+	// // simulate FIR
+	// parameter N = 11;
+	// parameter L = 11;
+	// integer i, j;
+	// reg signed [31:0] fir_tap 	 [0:N-1];
+	// reg signed [31:0] fir_data   [0:L-1];
+	// reg signed [31:0] fir_out_gt [0:L-1];
 
+	// initial begin
+	// 	fir_tap[0]  = 0;
+	// 	fir_tap[1]  = -10;
+	// 	fir_tap[2]  = -9;
+	// 	fir_tap[3]  = 23;
+	// 	fir_tap[4]  = 56;
+	// 	fir_tap[5]  = 63;
+	// 	fir_tap[6]  = 56;
+	// 	fir_tap[7]  = 23;
+	// 	fir_tap[8]  = -9;
+	// 	fir_tap[9]  = -10;
+	// 	fir_tap[10] = 0;
+	// 	for (i = 0;i < L;i = i + 1) begin
+	// 		fir_data[i] = i + 1; // from 1 to L
+	// 		fir_out_gt[i] = 0;
+	// 	end
+	// 	for (i = 0;i < L;i = i + 1) begin
+	// 		for (j = 0;j < N;j = j + 1) begin
+	// 			if (i - j >= 0) begin
+	// 				fir_out_gt[i] = fir_out_gt[i] + fir_tap[j] * fir_data[i - j];
+	// 			end
+	// 		end
+	// 		$display("fir_out_gt[%d] = %d (0x%h)", i, fir_out_gt[i], fir_out_gt[i]);
+	// 	end
+	// end
+	// integer k;
 	initial begin
 		wait(checkbits == 16'hAB40);
 		$display("LA Test 1 started");
 		//wait(checkbits == 16'hAB41);
 
-		wait(checkbits == 16'h2233);
-		$display("Call function adder() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
+		// for (k = 0;k < L;k = k + 1) begin
+		// 	wait(checkbits == fir_out_gt[k][15:0]);
+		// 	$display("FIR Output Passed! [Yours: 0x%h, GT: 0x%h]", checkbits, fir_out_gt[k][15:0]);
+		// end
+
+		/* check matmul() return value */
+		$display("Start MM matmul()");
+        wait(checkbits == 16'h003E);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		wait(checkbits == 16'h0044);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		wait(checkbits == 16'h004A);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+		wait(checkbits == 16'h0050);
+		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+
+
+		// wait(checkbits == 16'h2233);
+		// $display("Call function adder() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
 
 		wait(checkbits == 16'hAB51);
 		$display("LA Test 2 passed");

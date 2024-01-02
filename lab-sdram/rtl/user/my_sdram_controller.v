@@ -20,7 +20,7 @@ module sdram_controller (
         // User interface
         // Note: we want to remap addr (see below)
         // input [22:0] addr,       // address to read/write
-        input   [22:0] user_addr,   // the address will be remap to addr later
+        input   [31:0] user_addr,   // the address will be remap to addr later
         input   rw,                 // 1 = write, 0 = read
         input   [31:0] data_in,     // data from a read
         output  [31:0] data_out,    // data for a write
@@ -36,11 +36,20 @@ module sdram_controller (
     localparam tREF             = 6;       // 7T
     localparam tRef_Counter     = 750;     // 
     localparam PREFETCH_NUM     = 4; // include the first data 
+    // localparam tREAD            = tCASL + PREFETCH_NUM + 1;
     localparam tREAD            = tCASL + PREFETCH_NUM; 
 
-    `define BA      9:8
-    `define RA      22:10
-    `define CA      7:0
+    // `define BA      9:8
+    // `define RA      22:10
+    // `define CA      7:0
+
+    `define BA_      13:12
+    `define RA_      24:14
+    `define CA_      11:2
+
+    `define BA      11:10
+    `define RA      22:12
+    `define CA      9:0
 
     // Commands for the SDRAM
     localparam CMD_UNSELECTED    = 4'b1000;
@@ -53,7 +62,8 @@ module sdram_controller (
     localparam CMD_REFRESH       = 4'b0001;
     localparam CMD_LOAD_MODE_REG = 4'b0000;
     
-    localparam STATE_SIZE = 3;
+    //localparam STATE_SIZE = 3;
+    localparam STATE_SIZE = 4;
     localparam INIT = 4'd0,
                WAIT = 4'd1,
                IDLE = 4'd2,
@@ -61,14 +71,17 @@ module sdram_controller (
                ACTIVATE = 4'd4,
                READ = 4'd5,
                WRITE = 4'd6,
-               PRECHARGE = 4'd7;
+               PRECHARGE = 4'd7,
+               PREF = 4'd8;
     
     integer i;
 
 
-    wire [12:0] Mapped_RA;
+    //wire [12:0] Mapped_RA;
+    wire [10:0] Mapped_RA;
     wire [1:0]  Mapped_BA;
-    wire [7:0]  Mapped_CA;
+    // wire [7:0]  Mapped_CA;
+    wire [9:0]  Mapped_CA;
     wire [22:0] addr;
 
 
@@ -101,9 +114,9 @@ module sdram_controller (
     wire [20:0] addr_diff;
     wire read_valid;
 
-    assign Mapped_RA = user_addr[`RA];
-    assign Mapped_BA = user_addr[`BA];
-    assign Mapped_CA = user_addr[`CA];
+    assign Mapped_RA = user_addr[`RA_];
+    assign Mapped_BA = user_addr[`BA_];
+    assign Mapped_CA = user_addr[`CA_];
     assign addr = {Mapped_RA, Mapped_BA, Mapped_CA};
 
     // clock enable for SDRAM
@@ -151,11 +164,13 @@ module sdram_controller (
                 ba_d = addr[`BA];
             end
             READ: begin
-                a_d = {2'b0, 1'b0, addr[`CA], 2'b0} + {delay_cnt_q, 2'd0, 2'd0};
+                //a_d = {2'b0, 1'b0, addr[`CA], 2'b0} + {delay_cnt_q, 2'd0, 2'd0};
+                a_d = {2'b0, 1'b0, addr[`CA]} + delay_cnt_q;
+                // a_d = {2'b0, 1'b0, addr[7:4], 2'd0, 2'd0, 2'b0} + {delay_cnt_q, 2'd0, 2'd0};
                 ba_d = addr[`BA];
             end
             WRITE: begin
-                a_d = {2'b0, 1'b0, addr[`CA], 2'b00};
+                a_d = {2'b0, 1'b0, addr[`CA]};
                 ba_d = addr[`BA];
             end
             PRECHARGE: begin
@@ -216,6 +231,9 @@ module sdram_controller (
             READ: begin
                 delay_ctr_d = tCASL; 
             end
+            WRITE: begin
+                delay_ctr_d = tCASL;
+            end
             PRECHARGE: begin
                 delay_ctr_d = tPRE;
             end
@@ -229,17 +247,19 @@ module sdram_controller (
     end
 
     assign busy = state_q != IDLE;
+    reg pref_valid_q, pref_valid;
 
     always@(*)begin
         delay_cnt_d = delay_cnt_q;
         pref_based_addr_d = pref_based_addr_q;
         next_state_d = next_state_q;
         state_d = state_q;
+        pref_valid = 0;
 
         case (state_q)
             INIT: begin
                 state_d = IDLE;
-                pref_based_addr_d = 0;
+                pref_based_addr_d = {19{1'b1}};
             end
             WAIT: begin
                 state_d = (delay_ctr_q == 13'd0) ? next_state_q : state_q;
@@ -251,8 +271,9 @@ module sdram_controller (
                 end 
                 else if (in_valid)begin
                     if(~rw && in_pref_buf_flg)begin
-                        state_d = state_q;
-                        delay_cnt_d = delay_cnt_q + 1; 
+                        // state_d = state_q;
+                        state_d = PREF;
+                        pref_valid = 1;
                     end
                     else if (row_open_q[addr[`BA]]) begin // if the row is open we don't have to activate it
                         if (row_addr_q[addr[`BA]] == addr[`RA]) begin // Row is already open
@@ -271,6 +292,10 @@ module sdram_controller (
                     end
                 end
             end
+            PREF:begin
+                state_d = IDLE; 
+                pref_valid = 0;
+            end
             REFRESH: begin
                 state_d = WAIT;
                 next_state_d = IDLE;
@@ -282,16 +307,46 @@ module sdram_controller (
             READ: begin
                 state_d = (delay_cnt_q == tREAD) ? IDLE : state_q; 
                 delay_cnt_d = delay_cnt_q + 1; 
-                pref_based_addr_d = addr[22:2];
+                // pref_based_addr_d = {addr[22:4], 2'd0};
+                //pref_based_addr_d = addr[22:2];
+                pref_based_addr_d = addr;
             end
             PRECHARGE: begin
                 state_d = WAIT;
             end  
             WRITE: begin
-                state_d = IDLE;
+                // state_d = (delay_cnt_q == tCASL) ? IDLE : state_q; 
+                // delay_cnt_d = delay_cnt_q + 1; 
+                state_d = WAIT;
+                next_state_d = IDLE;
             end
         endcase
     end
+
+    // reg[2:0] write_cnt;
+    // reg write_flg;
+    // always@(posedge clk)begin
+    //     if(rst)begin
+    //         write_cnt <= 0;
+    //         write_flg <= 0;
+    //     end
+    //     else begin
+    //         if(state_q == WRITE)begin
+    //             write_flg <= 1;
+    //         end
+    //         else if (write_cnt == 4)begin
+    //             write_flg <=0;
+    //         end
+
+    //         if(write_flg)begin
+    //             write_cnt <= write_cnt + 1;
+    //         end
+    //         else begin
+    //             write_cnt <= 0;
+    //         end
+    //     end
+    // end
+
     always @(posedge clk) begin
         if(rst) begin
             state_q <= INIT;
@@ -304,6 +359,7 @@ module sdram_controller (
         next_state_q <= next_state_d;
         delay_cnt_q <= delay_cnt_d; 
         pref_based_addr_q <= pref_based_addr_d;
+        pref_valid_q <= pref_valid;
     end
     
 
@@ -329,10 +385,14 @@ module sdram_controller (
     end
 
 
-    assign addr_diff = addr[22:2] - pref_based_addr_q;
-    assign in_pref_buf_flg  =  (addr_diff < PREFETCH_NUM) && (addr_diff >= 0);
-    assign read_valid = delay_cnt_q >= tREAD;
+    //assign addr_diff = addr[22:2] - pref_based_addr_q;
+    assign addr_diff = addr - pref_based_addr_q;
+    wire same_bank = addr[`BA] == pref_based_addr_q[`BA];
+    assign in_pref_buf_flg  =  (addr_diff < PREFETCH_NUM) && (addr_diff >= 0) && same_bank;
+    // assign in_pref_buf_flg  =  0;
+    assign read_valid = delay_cnt_q == tREAD;
     
+
     always@(posedge clk)begin
         if(delay_cnt_q == tCASL + 1)begin
             pref_cnt <= 1;
@@ -346,10 +406,20 @@ module sdram_controller (
                 pref_flg <= 0;
             end
         end
+
+        if(state_q == WRITE && in_pref_buf_flg)begin
+            prefetch_buf[addr_diff[$clog2(PREFETCH_NUM)-1:0]] <= data_in;
+        end
     end
+    wire[31:0] pref_0 = prefetch_buf[0];
+    wire[31:0] pref_1 = prefetch_buf[1];
+    wire[31:0] pref_2 = prefetch_buf[2];
+    wire[31:0] pref_3 = prefetch_buf[3];
+
 
     assign data_out = prefetch_buf[addr_diff[$clog2(PREFETCH_NUM)-1:0]];   
-    assign out_valid = (in_valid & ~rw & in_pref_buf_flg & read_valid) | (state_q == WRITE); 
+    //assign out_valid = (in_valid & ~rw & in_pref_buf_flg & read_valid) | (state_q == WRITE); 
+    assign out_valid = (in_valid & ~rw & (pref_valid_q | read_valid)) | (state_q == WRITE); 
 
 
     always@(*)begin

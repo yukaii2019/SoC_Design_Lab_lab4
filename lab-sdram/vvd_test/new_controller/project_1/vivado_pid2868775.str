@@ -1,0 +1,196 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 2868775
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Dec 26 01:51:28 CST 2023
+Time zone: 	Taipei Standard Time (Asia/Taipei)
+
+OS: Ubuntu
+OS Version: 5.15.0-87-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: localhost:12.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/opt/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ykhsieh
+User home directory: /home/ykhsieh
+User working directory: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2022.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/ykhsieh/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/ykhsieh/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/ykhsieh/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/vivado.log
+Vivado journal file: 	/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2868775-MediaHLS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2022.1
+XILINX_SDK: /opt/Xilinx/Vitis/2022.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2022.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2022.1
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,926 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("New Project"); // f
+// HMemoryUtils.trashcanNow. Engine heap size: 1,937 MB. GUI used memory: 57 MB. Current time: 12/26/23, 1:51:29 AM CST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.xpr");
+// [GUI Memory]: 117 MB (+119685kb) [00:00:09]
+// [Engine Memory]: 1,942 MB (+1884895kb) [00:00:09]
+// Opening Vivado Project: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'. 
+// Project name: project_1; location: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bA
+// [Engine Memory]: 2,049 MB (+9836kb) [00:00:12]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 2); // D
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sdram_controller (sdram_controller.v)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sdram_controller (sdram_controller.v)]", 1, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("sdram_controller.v", 216, 172); // be
+selectCodeEditor("sdram_controller.v", 303, 254); // be
+selectCodeEditor("sdram_controller.v", 228, 203); // be
+selectCodeEditor("sdram_controller.v", 373, 208); // be
+typeControlKey((HResource) null, "sdram_controller.v", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 129 MB (+6644kb) [00:00:35]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1160] Copying file /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.runs/synth_1/sdram_controller.dcp to /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.srcs/utils_1/imports/synth_1 and adding it to utils fileset 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,124 MB. GUI used memory: 75 MB. Current time: 12/26/23, 1:51:59 AM CST
+// Tcl Message: launch_runs synth_1 -jobs 24 
+// Tcl Message: [Tue Dec 26 01:51:59 2023] Launched synth_1... Run output will be captured here: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Completed"); // ag
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 24, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,185 MB. GUI used memory: 75 MB. Current time: 12/26/23, 1:52:37 AM CST
+// [Engine Memory]: 2,185 MB (+35329kb) [00:01:15]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7806.152 ; gain = 0.000 ; free physical = 51405 ; free virtual = 115270 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7862.180 ; gain = 0.000 ; free physical = 51313 ; free virtual = 115177 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// [GUI Memory]: 151 MB (+16984kb) [00:01:16]
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+setText(PAResourceQtoS.ReportUtilizationDialog_RESULTS_NAME, "utilization_1"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,270 MB. GUI used memory: 112 MB. Current time: 12/26/23, 1:52:40 AM CST
+// Tcl Message: report_utilization -name utilization_1 
+// RouteApi::initDelayMediator elapsed time: 3s
+// [Engine Memory]: 2,473 MB (+188139kb) [00:01:19]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sdram_controller.v", 2); // m
+// [GUI Memory]: 172 MB (+13283kb) [00:01:23]
+// Elapsed time: 26 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+// Elapsed time: 32 seconds
+selectCodeEditor("sdram_controller.v", 546, 134); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 2,475 MB. GUI used memory: 113 MB. Current time: 12/26/23, 2:22:44 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,480 MB. GUI used memory: 101 MB. Current time: 12/26/23, 2:52:44 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,480 MB. GUI used memory: 101 MB. Current time: 12/26/23, 3:22:44 AM CST

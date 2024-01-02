@@ -1,0 +1,62 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Thu Dec 28 08:45:26 2023
+[*]
+[dumpfile] "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/testbench/counter_la/test_dma.vcd"
+[dumpfile_mtime] "Thu Dec 28 08:45:16 2023"
+[dumpfile_size] 86080
+[savefile] "/home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/testbench/counter_la/dma_test_waveform.gtkw"
+[timestart] 0
+[size] 1920 1017
+[pos] -1 -1
+*-18.000000 643000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test_dma.
+[sst_width] 388
+[signals_width] 361
+[sst_expanded] 1
+[sst_vpaned_height] 299
+@28
+test_dma.clk
+test_dma.rst
+test_dma.s_wbs_cyc_i
+test_dma.s_wbs_stb_i
+@24
+test_dma.s_wbs_dat_i[31:0]
+@22
+test_dma.s_wbs_adr_i[31:0]
+@28
+test_dma.s_wbs_ack_o
+test_dma.dma_u0.r_valid
+test_dma.dma_u0.valid
+test_dma.dma_u0.ap_start_r
+test_dma.dma_u0.state_r[2:0]
+@24
+test_dma.dma_u0.based_addr_r[31:0]
+test_dma.dma_u0.data_length_r[31:0]
+test_dma.dma_u0.data_cnt_r[31:0]
+@200
+-master_wbs
+@28
+test_dma.dma_u0.m_wbs_cyc_o
+test_dma.dma_u0.m_wbs_stb_o
+@24
+test_dma.dma_u0.m_wbs_adr_o[31:0]
+@28
+test_dma.dma_u0.m_wbs_ack_i
+@24
+test_dma.dma_u0.m_wbs_dat_i[31:0]
+@28
+test_dma.dma_u0.data_buf_empty
+test_dma.dma_u0.data_buf_full
+>-600
+test_dma.dma_u0.top_p_r[2:0]
+>0
+test_dma.dma_u0.write_p_r[1:0]
+test_dma.dma_u0.read_p_r[1:0]
+test_dma.dma_u0.sm_tready
+test_dma.dma_u0.sm_tvalid
+test_dma.dma_u0.sm_tlast
+@24
+test_dma.dma_u0.sm_tdata[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

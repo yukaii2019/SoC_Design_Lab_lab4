@@ -19,8 +19,8 @@
 #include <defs.h>
 #include <stub.c>
 
-extern int adder();
-
+//extern int adder();
+extern int* matmul();
 // --------------------------------------------------------
 
 /*
@@ -127,8 +127,11 @@ void main()
 		}
 	}
 */	
-	reg_mprj_datal = adder() << 16;	
-
+	// reg_mprj_datal = adder() << 16;	
+	int* tmp = matmul();
+	for (int i = 0; i < 4; i++) {
+		reg_mprj_datal = *(tmp+i) << 16; // sync();
+	}
 	//print("\n");
 	//print("Monitor: Test 1 Passed\n\n");	// Makes simulation very long!
 	reg_mprj_datal = 0xAB510000;

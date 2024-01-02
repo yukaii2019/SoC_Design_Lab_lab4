@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec 27 02:36:54 2023
+# Process ID: 2946468
+# Current directory: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.runs/synth_1
+# Command line: vivado -log sdram_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sdram_controller.tcl
+# Log file: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.runs/synth_1/sdram_controller.vds
+# Journal file: /home/ykhsieh/SoCDesignLab/caravel-soc_fpga-lab_new/lab-sdram/vvd_test/new_controller/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: MediaHLS, OS: Linux, CPU Frequency: 3400.000 MHz, CPU Physical cores: 16, Host memory: 134795 MB
+#-----------------------------------------------------------
+source sdram_controller.tcl -notrace
