@@ -53,7 +53,7 @@ Total (MM + FIR + QS):        4535
 ```
 
 ## Validate design
-```
+```sh
 cd testbench/counter_la_all
 ./run_test_arbiter
 ./run_test_dma_in
