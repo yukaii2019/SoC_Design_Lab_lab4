@@ -1,0 +1,17 @@
+rm -f counter_la_all.hex
+
+riscv32-unknown-elf-gcc -O3 -Wl,--no-warn-rwx-segments -g \
+	--save-temps \
+	-Xlinker -Map=output.map \
+	-I../../firmware \
+	-march=rv32i -mabi=ilp32 -D__vexriscv__ -D JUPYTER_FIRMWARE \
+	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+	-ffreestanding -nostartfiles -o counter_la_all.elf ../../firmware/crt0_vex.S ../../firmware/isr.c matmul.c uart.c counter_la_all.c
+# -nostartfiles	
+riscv32-unknown-elf-objcopy -O verilog counter_la_all.elf counter_la_all.hex
+riscv32-unknown-elf-objdump -D counter_la_all.elf > counter_la_all.out
+
+# to fix flash base address
+sed -ie 's/@10/@00/g' counter_la_all.hex
+
+cp counter_la_all.hex ../../vivado/jupyter_notebook/

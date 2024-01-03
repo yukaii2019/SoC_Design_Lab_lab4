@@ -1,0 +1,3 @@
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 -o test_sdram_controller.vvp test_sdram_controller.v ../../rtl/user/my_sdram_controller.v  ../../rtl/user/sdr.v
+vvp test_sdram_controller.vvp
+rm -f test_sdram_controller.vvp

@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Jan  3 02:12:40 2024
+[*]
+[dumpfile] "/home/ywfan/SOCD_Lab/lab_final/lab-wlos_yk/testbench/counter_la_all/counter_la_all.vcd"
+[dumpfile_mtime] "Wed Jan  3 02:12:03 2024"
+[dumpfile_size] 221626202
+[savefile] "/home/ywfan/SOCD_Lab/lab_final/lab-wlos_yk/testbench/counter_la_all/tmp.gtkw"
+[timestart] 3262560000
+[size] 1779 952
+[pos] -1 -1
+*-24.000000 2996862500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_all_tb.
+[treeopen] counter_la_all_tb.uut.
+[treeopen] counter_la_all_tb.uut.mprj.
+[treeopen] counter_la_all_tb.uut.mprj.mprj.
+[sst_width] 221
+[signals_width] 243
+[sst_expanded] 1
+[sst_vpaned_height] 436
+@28
+counter_la_all_tb.uut.mprj.wb_clk_i
+@22
+counter_la_all_tb.checkbits[15:0]
+@28
+counter_la_all_tb.uut.mprj.wbs_stb_i
+counter_la_all_tb.uut.mprj.wbs_cyc_i
+counter_la_all_tb.uut.mprj.wbs_we_i
+@22
+counter_la_all_tb.uut.mprj.wbs_adr_i[31:0]
+counter_la_all_tb.uut.mprj.wbs_dat_i[31:0]
+@23
+counter_la_all_tb.uut.mprj.wbs_dat_o[31:0]
+@28
+counter_la_all_tb.uut.mprj.wbs_ack_o
+@24
+counter_la_all_tb.uut.mprj.mprj.mm_u0.state_r[3:0]
+@28
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_cyc_o
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_stb_o
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_we_o
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_ack_i
+@22
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_adr_o[31:0]
+@24
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_dat_i[31:0]
+@22
+counter_la_all_tb.uut.mprj.mprj.mm_u0.m_wbs_dat_o[31:0]
+@420
+counter_la_all_tb.uut.mprj.mprj.mm_u0.data_A0[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.data_A1[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.data_A2[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.data_A3[31:0]
+@22
+counter_la_all_tb.uut.mprj.mprj.mm_u0.data_C_r[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.addr_A[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.addr_B[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.addr_C[31:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.i_r[4:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.j_r[4:0]
+counter_la_all_tb.uut.mprj.mprj.mm_u0.k_r[4:0]
+@28
+counter_la_all_tb.uut.mprj.mprj.mm_u0.ap_start_r
+counter_la_all_tb.uut.mprj.mprj.mm_u0.ap_done_r
+[pattern_trace] 1
+[pattern_trace] 0
